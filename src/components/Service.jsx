@@ -1,169 +1,222 @@
 import React from 'react'
-import Reviews from "./Home_Pages/Reviews"
-import Company_Slider from "./Home_Pages/Company_Slider"
-import Footer from "./Footer"
-import Home_Form from "./Home_Pages/Home_Form"
-import { a } from 'motion/react-client'
 
 const Service = () => {
   return (
-   <>
-   <div>
-    {/* services */}
-    <main className="container-fluid w-[85%]  p-6 mx-auto mt-10 animate__animated animate__fadeIn">
-        <div className="pb-5 text-center">
-          <h2 className="mt-5 text-3xl font-semibold text-blue-500 ">OUR SERVICES</h2>
-          <h1 className="mt-3 mb-5 text-4xl font-bold text-gray-800">
-            Custom IT Solutions for Your Successful Business
-          </h1>
-        </div>
-
-        <div className="flex flex-wrap justify-center gap-4 pt-5 mt-5 services-main">
-        {[
-            {
-              icon: "fa-solid fa-hexagon-nodes",
-              title: "Ai Development",
-              description:
-                "We provide advanced AI solutions, including machine learning. Our AI services are designed to enhance your business efficiency and drive innovation.",
-              link: "/service",
-            },
-            {
-              icon: "fa-solid fa-cloud",
-              title: "Cloud Services",
-              description:
-                "Our cloud solutions enable businesses to scale seamlessly with secure, and cost-effective cloud infrastructure, we deliver end-to-end cloud services.",
-              link: "/service",
-            },
-            {
-              icon: "fa-solid fa-code",
-              title: "Web Development",
-              description:
-                "We design and develop responsive, secure, and visually to your business needs. Our web solutions and an exceptional user experience.",
-              link: "/service",
-            },
-            {
-              icon: "fa-brands fa-apple",
-              title: "Apps Development",
-              description:
-                "We provide advanced AI solutions, including machine learning. Our AI services are designed to enhance your business efficiency and drive innovation.",
-              link: "/service",
-            },
-            {
-              icon: "fa-solid fa-magnifying-glass",
-              title: "SEO Optimization",
-              description:
-                "Boost your online presence with our expert SEO services. We help improve search engine rankings, drive organic traffic, and enhance your brand visibility.",
-              link: "/service",
-            },
-            {
-              icon: "fa-solid fa-phone",
-              title: "Call Us For Quote",
-              description:
-                "Get in touch with us today for a personalized quote tailored to your project needs. Let’s bring your ideas to life!",
-              link: "tel:+919558476369",
-            },
-          ].map((service, index) => (
-            <div
-              key={index}
-              className=" wow  services-boxes rounded-xl h-[20rem] mt-4 p-5 w-full pt-5 sm:w-[48%] lg:w-[32%] flex flex-col justify-between text-center shadow-md"
-            >
-              <div className="info"><a href={service.link}>
-                <div className="mb-5 animate__animated  animate__pulse animate__delay-0.2s  animate__infinite">
-
-                  <i className={`text-5xl text-blue-500   ${service.icon}`}></i>
-                </div> </a>
-                <h1 className="pb-5 text-xl font-medium ">{service.title}</h1>
-                <p>{service.description}</p>
-              </div>
-              <a className='wow animate__animated animate__pulse animate__infinite' href={service.link}>
-
-                <i
-                  className="flex items-center justify-center mx-auto text-2xl text-blue-500 wow fadeInUp fa-solid fa-arrow-right-long"
-                  data-wow-duration="1s"
-                  data-wow-delay="0.5s"
-                ></i>
-
-              </a>
+    <>
+    <div>
+     <div>
+        <div class="container-fluid bg-primary py-5 bg-header" style={{ marginBottom: "30px" }}>
+          <div class="row py-5">
+            <div class="col-12 pt-lg-5 mt-lg-5 text-center">
+              <h1 class="display-4 text-white animated zoomIn">Service</h1>
+              <a href="/" class="h5 text-white">Home</a>
+              <i class="far fa-circle text-white px-2"></i>
+              <a href="/service" class="h5 text-white">Service</a>
             </div>
-          ))}
-        </div>
-      </main>
-
-
-      <main className=" flex flex-col md:flex-row w-[85%] mx-auto p-6 mt-10 md:mb-10 md:pb-10 " >
-        <div className="w-full h-auto md:w-1/2 md:h-96 wow animate__animated animate__bounceInLeft">
-          <h1 className="m-2 text-lg text-2xl font-extrabold text-blue-500">REQUEST A QUOTE</h1>
-          <h1 className="text-4xl m-2 font-extrabold text-xl/12 leading-[1.4] pb-3">
-            Need A Free Quote? <br /> Please Feel Free to Contact Us
-          </h1>
-          <div className="flex flex-col w-full m-2 md:flex-row">
-            <p className="flex items-center text-lg">
-              <i className="m-2 text-2xl text-blue-500 fa-solid fa-reply"></i>
-              Reply within 24 hours
-            </p>
-            <p className="flex items-center text-lg xl-5 m-sm-0 lg:ps-3 md:ps-3">
-              <i className="m-2 text-2xl text-blue-500 fa-solid fa-phone"></i>
-              24 hrs telephone support
-            </p>
           </div>
-          <p className="p-2 text-lg text-gray-400">
-          Avatara TechnoBiz is a Surat-based digital agency specializing in delivering high-quality, cost-effective, and reliable web and e-commerce solutions. With a commitment to excellence, we ensure result-oriented services tailored to meet the unique 
+        </div>
+      </div>
+
+      <div className="py-5 container-fluid wow fadeInUp" data-wow-delay="0.1s">
+        <div className="container py-5">
+          <div className="pb-3 mx-auto mb-5 text-center section-title position-relative" style={{ maxWidth: '600px' }}>
+            <h5 className="fw-bold text-uppercase" style={{color:'#06A3DA'}}>Our Services</h5>
+            <h1 className="mb-0">Custom IT Solutions for Your Successful Business</h1>
+          </div>
+          <div className="row g-5">
+            <div className="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
+              <div className="text-center rounded service-item bg-light d-flex flex-column align-items-center justify-content-center">
+                <div className="service-icon">
+                  <i className="text-white fa fa-shield-alt"></i>
+                </div>
+                <h4 className="mb-3">AI Development</h4>
+                <p className="m-0">
+                  We provide advanced AI solutions, including machine learning, natural language processing, and predictive analytics. Our AI services are designed to enhance your business efficiency and drive innovation.
+                </p>
+                <a className="rounded btn btn-lg" style={{backgroundColor:'#06A3DA'}} href="">
+                  <i className="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            <div className="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.6s">
+              <div className="text-center rounded service-item bg-light d-flex flex-column align-items-center justify-content-center">
+                <div className="service-icon">
+                  <i className="text-white fa fa-chart-pie"></i>
+                </div>
+                <h4 className="mb-3">Cloud Services</h4>
+                <p className="m-0">
+                  Our cloud solutions enable businesses to scale seamlessly with secure, reliable, and cost-effective cloud infrastructure. From migration to management, we deliver end-to-end cloud services.
+                </p>
+                <a className="rounded btn btn-lg" style={{backgroundColor:'#06A3DA'}} href="">
+                  <i className="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            <div className="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.9s">
+              <div className="text-center rounded service-item bg-light d-flex flex-column align-items-center justify-content-center">
+                <div className="service-icon">
+                  <i className="text-white fa fa-code"></i>
+                </div>
+                <h4 className="mb-3">Web Development</h4>
+                <p className="m-0">
+                  We design and develop responsive, secure, and visually appealing websites tailored to your business needs. Our web solutions ensure optimal performance and an exceptional user experience.
+                </p>
+                <a className="rounded btn btn-lg"  style={{backgroundColor:'#06A3DA'}} href="">
+                  <i className="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            <div className="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
+              <div className="text-center rounded service-item bg-light d-flex flex-column align-items-center justify-content-center">
+                <div className="service-icon">
+                  <i className="text-white fab fa-android"></i>
+                </div>
+                <h4 className="mb-3">Apps Development</h4>
+                <p className="m-0">
+                  We create custom mobile applications for iOS and Android platforms. Our apps are user-centric, feature-rich, and designed to elevate your business operations.
+                </p>
+                <a className="rounded btn btn-lg"  style={{backgroundColor:'#06A3DA'}} href="">
+                  <i className="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            <div className="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.6s">
+              <div className="text-center rounded service-item bg-light d-flex flex-column align-items-center justify-content-center">
+                <div className="service-icon">
+                  <i className="text-white fa fa-search"></i>
+                </div>
+                <h4 className="mb-3">SEO Optimization</h4>
+                <p className="m-0">
+                  Boost your online presence with our expert SEO services. We help improve search engine rankings, drive organic traffic, and enhance your brand visibility.
+                </p>
+                <a className="rounded btn btn-lg" style={{backgroundColor:'#06A3DA'}} href="">
+                  <i className="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            <div className="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.9s">
+              <div className="p-5 text-center rounded position-relative h-100 d-flex flex-column align-items-center justify-content-center" style={{backgroundColor:'#06A3DA'}}>
+                <h3 className="mb-3 text-white">Call Us For Quote</h3>
+                <p className="mb-3 text-white">
+                  Get in touch with us today for a personalized quote tailored to your project needs. Let’s bring your ideas to life!
+                </p>
+                <a href="tel:9558476369">
+                  <h2 className="mb-0 text-white">+91 9558476369</h2>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    {/* Footer */}
+
+{/* Footer */}
+<div className="mt-5 container-fluid bg-dark text-light wow fadeInUp" data-wow-delay="0.1s">
+  <div className="container">
+    <div className="row gx-5">
+      <div className="col-lg-4 col-md-6 footer-about">
+        <div className="p-4 text-center d-flex flex-column align-items-center justify-content-center" style={{backgroundColor:'#06A3DA'}}>
+          <a href="index.html" className="navbar-brand">
+            <img src="img/favicon.ico" alt="" />
+          </a>
+          <p>
+            We specialize in providing innovative, results-driven services that are tailored to meet the unique needs of our global clientele. With a strong focus on delivering projects on time, we help businesses achieve their digital goals by combining cutting-edge technology with creative excellence.
           </p>
-          <div className="call">
-            <h1 className="pt-5 mb-5 text-xl ms-3 text-sky-700">
-              Call to ask any question
-     
-            </h1>
-            <div className="flex items-center">
-              <div className="icon">
-                <i className="text-2xl text-blue-500 rounded-lg ms-2 ps-2 fa-solid fa-phone"></i>
+          <form action="">
+            <div className="input-group">
+              <input type="text" className="p-3 border-white form-control" placeholder="Your Email" />
+              <button className="btn btn-dark">Sign Up</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div className="text-white col-lg-8 col-md-6">
+        <div className="row gx-5">
+          <div className="pt-5 mb-5 col-lg-5 col-md-12 footer-section">
+            <div className="pb-3 mb-4 section-title section-title-sm position-relative">
+              <h3 className="mb-0 text-light">Get In Touch</h3>
+            </div>
+            <a href="https://www.google.com/maps/place/Avatara+Technobiz+LLP/@21.1407757,72.8794309,17z/data=!3m1!4b1!4m6!3m5!1s0x3be0515a0f81fa81:0x4847daa352709464!8m2!3d21.1407758!4d72.8843018!16s%2Fg%2F11wtdy2fs9?entry=ttu&g_ep=EgoyMDI1MDEwNi4xIKXMDSoASAFQAw%3D%3D">
+              <div className="mb-2 d-flex">
+                <i className="bi bi-geo-alt me-2" style={{color:'#06A3DA'}}></i>
+                <p className="mb-0">
+                  Office No. 14, 5th floor, Madhuram Arcade-2, Near Madhuram Circle Dindoli, Surat, 394210
+                </p>
               </div>
-              <a href="tel:+919558476369">
-                <div className="text">
-                  <h1 className="m-2 text-lg text-center text-black">+91 9558476369</h1>
-                </div>
+            </a>
+            <a href="https://mail.google.com/mail/u/0/?fs=1&to=avataratechnobiz@gmail.com&tf=cm" target="_self">
+              <div className="mb-2 d-flex">
+                <i className="bi bi-envelope-open me-2" style={{color:'#06A3DA'}}></i>
+                <p className="mb-0">avataratechnobiz@gmail.com</p>
+              </div>
+            </a>
+
+            <a href="tel:9558476369">
+              <div className="mb-2 d-flex">
+                <i className="bi bi-telephone me-2" style={{color:'#06A3DA'}}></i>
+                <p className="mb-0">+91 9558476369</p>
+              </div>
+            </a>
+
+            <div className="mt-4 d-flex">
+              <a className="btn btn-square me-2" style={{backgroundColor:"#06A3DA"}} href="#"><i className="fa fa-envelope-open "></i></a>
+              <a className="btn btn-square me-2" style={{backgroundColor:"#06A3DA"}} href="https://www.linkedin.com/company/avatara-technobiz-llp/posts/?feedView=all">
+                <i className="fab fa-linkedin-in fw-normal"></i>
+              </a>
+              <a className="btn btn-square" style={{backgroundColor:"#06A3DA"}} href="https://www.instagram.com/avataratechnobiz/">
+                <i className="fab fa-instagram fw-normal"></i>
               </a>
             </div>
-            <div className="flex items-center">
-              <a href="mailto:avataratechnobiz@gmail.com">
-                <div className="icon">
-                  <i className="py-2 text-2xl text-blue-500 rounded-lg ms-2 ps-2 fa-solid fa-envelope"></i>
-                </div>
-              </a>
-              <div className="text">
-                <h1 className="m-2 text-lg text-center text-black">avataratechnobiz@gmail.com</h1>
-              </div>
+          </div>
+          <div className="pt-0 mb-5 col-lg-3 col-md-12 pt-lg-5">
+            <div className="pb-3 mb-4 section-title section-title-sm position-relative">
+              <h3 className="mb-0 text-light">Quick Links</h3>
             </div>
-            <div className="flex items-center">
-              <a href="https://www.linkedin.com/company/avatara-technobiz-llp/posts/?feedView=all">
-                <div className="icon">
-                  <i className="py-2 text-3xl text-blue-500 rounded-lg ms-2 ps-2 fa-brands fa-linkedin"></i>
-                </div>
-              </a>
-              <div className="text">
-                <h1 className="m-2 text-lg text-center text-black">Avatara Technobiz</h1>
-              </div>
+            <div className="link-animated d-flex flex-column justify-content-start">
+              <a className="mb-2 text-light" href="/"><i className="bi bi-arrow-right me-2" style={{color:"#06A3DA"}}></i> Home</a>
+              <a className="mb-2 text-light" href="/about"><i className="bi bi-arrow-right me-2" style={{color:"#06A3DA"}}></i> About Us</a>
+              <a className="mb-2 text-light" href="./service"><i className="bi bi-arrow-right me-2" style={{color:"#06A3DA"}}></i> Our Services</a>
+              <a className="mb-2 text-light" href="./career"><i className="bi bi-arrow-right me-2" style={{color:"#06A3DA"}}></i> Career</a>
+              <a className="text-light" href="./contact"><i className="bi bi-arrow-right me-2" style={{color:"#06A3DA"}}></i> Contact Us</a>
+            </div>
+          </div>
+          <div className="pt-0 mb-5 col-lg-4 col-md-12 pt-lg-5">
+            <div className="pb-3 mb-4 section-title section-title-sm position-relative">
+              <h3 className="mb-0 text-light">Popular Links</h3>
+            </div>
+            <div className="link-animated d-flex flex-column justify-content-start">
+              <a className="mb-2 text-light" href="./gallery.html"><i className="bi bi-arrow-right me-2" style={{color:"#06A3DA"}}></i> Gallery</a>
+              <a className="mb-2 text-light" href="#"><i className="bi bi-arrow-right me-2" style={{color:"#06A3DA"}}></i> Features</a>
+              <a className="mb-2 text-light" href="#"><i className="bi bi-arrow-right me-2" style={{color:"#06A3DA"}}></i> Privacy Policy</a>
+              <a className="mb-2 text-light" href="service.html"><i className="bi bi-arrow-right me-2" style={{color:"#06A3DA"}}></i> Services</a>
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+</div>
+{/* Footer End */}
 
-        {/* Home_Form Component */}
-        <div className="w-full h-auto md:w-1/2 md:h-96 animate__animated animate__bounceInRight" id='requestaquate'>
-          <Home_Form />
+{/* Footer Bottom Start */}
+<div className="text-white container-fluid" style={{ background: '#061429' }}>
+  <div className="container m-auto text-center">
+    <div className="row justify-content-center">
+      <div className="col-lg-8 col-md-6">
+        <div className="d-flex align-items-center justify-content-center" style={{ height: '75px' }}>
+          <p className="mb-0">
+            &copy; <a className="text-white border-bottom" href="#">avataratechnobiz.com</a>. All Rights Reserved. Designed by
+            <a className="text-white border-bottom" href="#">Avatara TechnoBiz</a>
+          </p>
         </div>
-      </main>
-
-  {/* reviews */}
-  <Reviews />
-
-  {/* company slider */}
-  <Company_Slider />
- 
- {/* footer */}
- <Footer />
-
-   </div>
-   </>
+      </div>
+    </div>
+  </div>
+</div>
+    </>
   )
 }
 

@@ -1,428 +1,682 @@
-import React, { useEffect, useState } from 'react';
-import "./style.css"
-import CounterUp from './Home_Pages/Counter_Up';
+
+import React from 'react';
+import './style.css';
 import Home_Form from './Home_Pages/Home_Form';
-import Reviews from './Home_Pages/Reviews';
-import Company_Slider from './Home_Pages/Company_Slider';
-import Footer from './Footer';
 
 
 const Home = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [activeReviewIndex, setActiveReviewIndex] = useState(0);
-
-  const nextReview = () => {
-    setActiveReviewIndex((prev) => (prev + 1) % reviews.length);
-  };
-
-  const prevReview = () => {
-    setActiveReviewIndex((prev) => (prev === 0 ? reviews.length - 1 : prev - 1));
-  };
-
-
-  const slides = [
-    {
-      image: 'https://www.michaelpage.co.in/sites/michaelpage.com.sg/files/inline-images/How%20to%20write%20employee%20testimonials%202_0.jpg',
-      title: 'Creative & Innovative Digital Solution',
-      subtitle: 'Creative & Innovative',
-      link: 'service.html',
-      btnText: 'Free Quote',
-    },
-    {
-      image: 'https://media.licdn.com/dms/image/v2/C5612AQFMCF78-Wfjkw/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1572341413864?e=2147483647&v=beta&t=IVNcYZMp7aYmnlqmE0w24YbGl1sVfrNhs8O41rIMl_k',
-      title: 'Expert Solutions & Digital Transformation',
-      subtitle: 'Enhance Digital Presence',
-      link: 'service.html',
-      btnText: 'Free Quote',
-    },
-  ];
-
-  const handleNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
-  };
-
-  const handlePrev = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + slides.length) % slides.length);
-  };
-
   return (
-    //slider
     <>
-      <div id="header-carousel" className="relative w-full overflow-hidden animate__animated animate__fadeInUp animate__delay-0.1s ">
-    <div className="relative h-[800px] sm:h-[600px] md:h-[700px] lg:h-[800px]">
-      {slides.map((slide, index) => (
-        <div
-          key={index}
-          className={`absolute inset-0 w-full h-full transition-opacity duration-700 ease-in-out ${currentIndex === index ? 'opacity-100' : 'opacity-0'}`}
-        >
-          <img
-            className="object-cover w-full h-full opacity-60"
-            src={slide.image}
-            alt={slide.title}
-          />
-          <div className="absolute inset-0 flex flex-col items-center justify-center p-6 bg-opacity-70">
-            <div className="max-w-3xl p-6 space-y-4 text-center">
-              <h5 className="text-lg font-semibold text-blue-800 uppercase">
-                {slide.subtitle}
-              </h5>
-              <h1 className="text-4xl font-bold text-gray-800 md:text-6xl">
-                {slide.title}
-              </h1>
-              <div className="flex justify-center gap-4">
-                <a
-                  href={"#requestaquate"}
-                  className="px-5 py-3 text-white transition bg-blue-600 rounded-lg shadow-lg hover:bg-blue-700"
-                >
-                  {slide.btnText}
+      {/* <div id="spinner" className="bg-white show position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+      <div className="spinner"></div>
+    </div> */}
+      <div id="header-carousel" className="mb-5 carousel slide carousel-fade" data-bs-ride="carousel">
+        <div className="carousel-inner">
+          <div className="carousel-item active">
+            <img className="w-100" src="src/assets/carousel-1.jpg" alt="Image" />
+            <div className="carousel-caption d-flex flex-column align-items-center justify-content-center">
+              <div className="p-3" style={{ maxWidth: '900px' }}>
+                <h5 className="mb-3 text-white text-uppercase animated slideInDown">
+                  Creative & Innovative
+                </h5>
+                <h1 className="text-white display-1 mb-md-4 animated zoomIn">
+                  Creative & Innovative Digital Solution
+                </h1>
+                <a href="service.html" className="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">
+                  Free Quote
                 </a>
-                <a
-                  href="/contact"
-                  className="px-5 py-3 text-white transition border border-white rounded-lg shadow-lg hover:bg-white hover:text-black"
-                >
+                <a href="contact.html" className="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">
+                  Contact Us
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className="carousel-item">
+            <img className="w-100" src="src/assets/carousel-2.jpg" alt="Image" />
+            <div className="carousel-caption d-flex flex-column align-items-center justify-content-center">
+              <div className="p-3" style={{ maxWidth: '900px' }}>
+                <h5 className="mb-3 text-white text-uppercase animated slideInDown">
+                  Enhance Digital Presence
+                </h5>
+                <h1 className="text-white display-1 mb-md-4 animated zoomIn">
+                  Expert Solutions & Digital Transformation
+                </h1>
+                <a href="service.html" className="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">
+                  Free Quote
+                </a>
+                <a href="contact.html" className="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">
                   Contact Us
                 </a>
               </div>
             </div>
           </div>
         </div>
-      ))}
-    </div>
-    <button
-      onClick={handlePrev}
-      className="absolute p-3 text-white transform -translate-y-1/2 bg-black bg-opacity-50 rounded-full top-1/2 left-4 hover:bg-opacity-75"
-    >
-      <span className="sr-only">Previous</span>
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-      </svg>
-    </button>
-    <button
-      onClick={handleNext}
-      className="absolute p-3 text-white transform -translate-y-1/2 bg-black bg-opacity-50 rounded-full top-1/2 right-4 hover:bg-opacity-75"
-    >
-      <span className="sr-only">Next</span>
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-      </svg>
-    </button>
-  </div>
-
-      {/* counter up form another components */}
-      <CounterUp />
-
-
-      {/* about section */}
-
-      <main className="container flex flex-col items-center p-6 mx-auto mt-10 bg-white rounded-lg max-w-screen-1xl md:flex-row "> 
-
-        {/* Left Section */}
-        <div className="p-6 space-y-6 md:w-1/2">
-          <h1 className="text-4xl font-bold text-gray-800">
-            Your Trusted Partner for Cutting-Edge IT Solutions
-          </h1>
-          <p className="text-gray-600">
-            We started in 2024 with a vision to positively impact businesses. We take pride in delivering innovative solutions and services with a team of 80+ professionals to help our clients achieve their goals. We work with a range of industries, including Education, Healthcare, Finance, Legal, E-commerce, Social Networking, Automobile, and Fitness. Our solutions are tailored to our clients' specific needs, and we are committed to quality, reliability, and innovation.
-          </p>
-          <div className="grid grid-cols-2 gap-4">
-            <div className="flex items-center text-lg">
-              <i className="p-2 text-xl text-blue-500 fa-solid fa-check"></i>Programming Experts
+        <button className="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
+          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span className="visually-hidden">Previous</span>
+        </button>
+        <button className="carousel-control-next" type="button" data-bs-target="#header-carousel" data-bs-slide="next">
+          <span className="carousel-control-next-icon" aria-hidden="true"></span>
+          <span className="visually-hidden">Next</span>
+        </button>
+      </div>
+      {/* Facts Start */}
+      <div className="py-5 container-fluid facts pt-lg-0">
+        <div className="container py-5 pt-lg-0">
+          <div className="row gx-0">
+            <div className="col-lg-4 wow zoomIn" data-wow-delay="0.1s">
+              <div
+                className="p-4 shadow d-flex align-items-center justify-content-center"
+                style={{ height: '150px', backgroundColor: '#06A3DA' }}
+              >
+                <div
+                  className="mb-2 bg-white rounded d-flex align-items-center justify-content-center"
+                  style={{ width: '60px', height: '60px' }}
+                >
+                  <i className="fa fa-users" style={{ color: "#06A3DA" }}></i>
+                </div>
+                <div className="ps-4">
+                  <h5 className="mb-0 text-white">Happy Clients</h5>
+                  <h1 className="mb-0 text-white" data-toggle="counter-up">
+                    12345
+                  </h1>
+                </div>
+              </div>
             </div>
-            <div className="flex items-center text-lg">
-              <i className="p-2 text-xl text-blue-500 fa-solid fa-check"></i>24/7 Support
+            <div className="col-lg-4 wow zoomIn" data-wow-delay="0.3s">
+              <div
+                className="p-4 shadow bg-light d-flex align-items-center justify-content-center"
+                style={{ height: '150px' }}
+              >
+                <div
+                  className="mb-2 rounded d-flex align-items-center justify-content-center"
+                  style={{ width: '60px', height: '60px', backgroundColor: '#06A3DA' }}
+                >
+                  <i className="text-white fa fa-check"></i>
+                </div>
+                <div className="ps-4">
+                  <h5 className="mb-0" style={{ color: "#06A3DA" }}>Projects Done</h5>
+                  <h1 className="mb-0" data-toggle="counter-up">
+                    12345
+                  </h1>
+                </div>
+              </div>
             </div>
-            <div className="flex items-center text-lg">
-              <i className="p-2 text-xl text-blue-500 fa-solid fa-check"></i>Professional Staff
-            </div>
-            <div className="flex items-center text-lg">
-              <i className="p-2 text-xl text-blue-500 fa-solid fa-check"></i>Timely Delivery
+            <div className="col-lg-4 wow zoomIn" data-wow-delay="0.6s">
+              <div
+                className="p-4 shadow d-flex align-items-center justify-content-center"
+                style={{ height: '150px', backgroundColor: '#06A3DA' }}
+              >
+                <div
+                  className="mb-2 bg-white rounded d-flex align-items-center justify-content-center"
+                  style={{ width: '60px', height: '60px' }}
+                >
+                  <i className="fa fa-award" style={{ color: "#06A3DA" }}></i>
+                </div>
+                <div className="ps-4">
+                  <h5 className="mb-0 text-white">Win Awards</h5>
+                  <h1 className="mb-0 text-white" data-toggle="counter-up">
+                    12345
+                  </h1>
+                </div>
+              </div>
             </div>
           </div>
-          <div className="flex gap-4">
-            <a href="tel:+919558476369" className="px-6 py-4 font-bold text-white transition bg-blue-600 rounded-lg shadow-lg hover:bg-blue-700">
-              +91 9558476369
-            </a>
-            <a href="#requestaquate" className="px-6 py-4 font-bold text-white transition bg-blue-600 rounded-lg shadow-lg hover:bg-blue-700">
-              Request A Quote
-            </a>
-          </div>
-        </div>
-
-        {/* Right Section */}
-        <div className="flex justify-end md:w-1/2">
-          <img
-            src="https://adso.com/static/in/img/about.jpg"
-            alt="Team Discussion"
-            className="w-full max-w-xl rounded-lg shadow-md"
-          />
-        </div>
-      </main>
-      {/* <main className="container flex flex-col items-center p-6 mx-auto mt-10 space-y-8 bg-white rounded-lg max-w-screen-1xl md:flex-row md:space-y-0 md:space-x-8">
-    <div className="space-y-6 md:w-1/2">
-      <h1 className="text-4xl font-bold text-gray-800">
-        Your Trusted Partner for Cutting-Edge IT Solutions
-      </h1>
-      <p className="text-gray-600">
-        We started in 2024 with a vision to positively impact businesses...
-      </p>
-      <div className="grid grid-cols-2 gap-6">
-        <div className="flex items-center text-lg">
-          <i className="p-2 text-xl text-blue-500 fa-solid fa-check"></i>Programming Experts
-        </div>
-        <div className="flex items-center text-lg">
-          <i className="p-2 text-xl text-blue-500 fa-solid fa-check"></i>24/7 Support
-        </div>
-        <div className="flex items-center text-lg">
-          <i className="p-2 text-xl text-blue-500 fa-solid fa-check"></i>Professional Staff
-        </div>
-        <div className="flex items-center text-lg">
-          <i className="p-2 text-xl text-blue-500 fa-solid fa-check"></i>Timely Delivery
         </div>
       </div>
-      <div className="flex gap-4">
-        <a href="tel:+919558476369" className="px-6 py-4 font-bold text-white transition bg-blue-600 rounded-lg shadow-lg hover:bg-blue-700">
-          +91 9558476369
-        </a>
-        <a href="#requestaquate" className="px-6 py-4 font-bold text-white transition bg-blue-600 rounded-lg shadow-lg hover:bg-blue-700">
-          Request A Quote
-        </a>
-      </div>
-    </div>
-    <div className="flex justify-end md:w-1/2">
-      <img src="src/assets/about.jpg" alt="Team Discussion" className="w-full max-w-xl rounded-lg shadow-md" />
-    </div>
-  </main> */}
+      {/* Facts End */}
 
-      {/* why choose us section */}
-
-      <main className="container max-w-screen-1xl mt-5 animate__animated  animate__delay-0.2s mx-auto p-6 space-y-12">
-        {/* Title Section */}
-        <div className="text-center">
-          <h2 className="mt-5 text-3xl font-semibold text-blue-500">WHY CHOOSE US</h2>
-          <h1 className="mt-3 mb-5 text-4xl font-bold text-gray-800">
-            We Are Here to Grow Your Business Exponentially
-          </h1>
-        </div>
-
-        {/* Features Section */}
-        <div className="grid items-start grid-cols-1 gap-8 lg:grid-cols-3">
-          {/* Left Features */}
-          <div className="space-y-6">
-            <div className="bg-white p-6 rounded-lg shadow-md animate__animated animate__bounceInLeft animate__delay-0.2s">
-              <div className="flex items-center justify-center w-12 h-12 mb-4 text-white bg-blue-500 rounded-md">
-                <i className="fas fa-paint-brush"></i>
+      {/* About Start */}
+      <div className="py-5 container-fluid wow fadeInUp" data-wow-delay="0.1s">
+        <div className="container py-5">
+          <div className="row g-5">
+            <div className="col-lg-7">
+              <div className="pb-3 mb-3 section-title position-relative">
+                <h5 className="fw-bold text-uppercase" style={{ color: "#06A3DA" }}>About Us</h5>
+                <h1 className="mb-0">
+                  Your Trusted Partner for Cutting-Edge IT Solutions
+                </h1>
               </div>
-              <h3 className="text-xl font-semibold text-gray-800">Quality Design</h3>
-              <p className="mt-2 text-gray-600">
-                Our designs blend creativity with functionality, ensuring a seamless user experience while enhancing your brand’s visual appeal and market presence.
+              <p className="mb-4">
+                We started in 2024 with a vision to positively impact businesses. We take pride in delivering innovative solutions and services with a team of 80+ professionals to help our clients achieve their goals. We work with a range of industries, including Education, Healthcare, Finance, Legal, E-commerce, Social Networking, Automobile, and Fitness. Our solutions are tailored to our clients' specific needs, and we are committed to quality, reliability, and innovation.
               </p>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg shadow-md animate__animated animate__bounceInLeft animate__delay-0.2s">
-              <div className="flex items-center justify-center w-12 h-12 mb-4 text-white bg-blue-500 rounded-md">
-                <i className="fas fa-clock"></i>
+              <div className="mb-3 row g-0">
+                <div className="col-sm-6 wow zoomIn" data-wow-delay="0.2s">
+                  <h5 className="mb-3">
+                    <i className="fa fa-check me-3" style={{ color: "#06A3DA" }}></i>Programming Experts
+                  </h5>
+                  <h5 className="mb-3">
+                    <i className="fa fa-check me-3" style={{ color: "#06A3DA" }}></i>Professional Staff
+                  </h5>
+                </div>
+                <div className="col-sm-6 wow zoomIn" data-wow-delay="0.4s">
+                  <h5 className="mb-3">
+                    <i className="fa fa-check me-3" style={{ color: "#06A3DA" }}></i>24/7 Support
+                  </h5>
+                  <h5 className="mb-3">
+                    <i className="fa fa-check me-3" style={{ color: "#06A3DA" }}></i>Timely Delivery
+                  </h5>
+                </div>
               </div>
-              <h3 className="text-xl font-semibold text-gray-800">Timely Delivery</h3>
-              <p className="mt-2 text-gray-600">
-                We understand the importance of deadlines and pride ourselves on delivering your projects on time, every time, without compromising quality and technologies.
-              </p>
-            </div>
-          </div>
-
-          {/* Center Image */}
-          <div className="flex justify-center animate__animated animate__backInUp animate__delay-0.3s">
-            <img
-              src="https://m.media-amazon.com/images/I/7183mrVYBZL._AC_UF350,350_QL80_.jpg"
-              alt="Team Discussion"
-              className="w-full max-w-lg rounded-lg shadow-md"
-            />
-          </div>
-
-          {/* Right Features */}
-          <div className="space-y-6">
-            <div className="bg-white p-6 rounded-lg shadow-md animate__animated animate__bounceInRight animate__delay-0.2s">
-              <div className="flex items-center justify-center w-12 h-12 mb-4 text-white bg-blue-500 rounded-md">
-                <i className="fas fa-code"></i>
+              <div className="mb-4 d-flex align-items-center wow fadeIn" data-wow-delay="0.6s">
+                <a href="tel:9558476369">
+                  <div
+                    className="rounded d-flex align-items-center justify-content-center"
+                    style={{ width: '60px', height: '60px', backgroundColor: '#06A3DA' }}
+                  >
+                    <i className="text-white fa fa-phone-alt"></i>
+                  </div>
+                </a>
+                <div className="ps-4">
+                  <h5 className="mb-2">Call to ask any question</h5>
+                  <a href="tel:9558476369">
+                    <h4 className="mb-0" style={{ color: "#06A3DA", textDecoration: 'none' }}>+91 9558476369</h4>
+                  </a>
+                </div>
               </div>
-              <h3 className="text-xl font-semibold text-gray-800">Programming Experts</h3>
-              <p className="mt-2 text-gray-600">
-                Our skilled developers deliver tailored solutions using the latest technologies and best practices, ensuring your business goals are met effectively.
-              </p>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg shadow-md animate__animated animate__bounceInRight animate__delay-0.2s">
-              <div className="flex items-center justify-center w-12 h-12 mb-4 text-white bg-blue-500 rounded-md">
-                <i className="fa-solid fa-phone"></i>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-800">24/7 Support</h3>
-              <p className="mt-2 text-gray-600">
-                Our dedicated support team is available round-the-clock to assist you with any technical issues or queries, ensuring continuous assistance whenever you need it.
-              </p>
-            </div>
-          </div>
-        </div>
-      </main>
-
-      {/* Our Services */}
-      <main className="container p-6 mx-auto mt-10 animate__animated animate__fadeIn">
-        <div className="pb-5 text-center">
-          <h2 className="mt-5 text-3xl font-semibold text-blue-500 ">OUR SERVICES</h2>
-          <h1 className="mt-3 mb-5 text-4xl font-bold text-gray-800">
-            Custom IT Solutions for Your Successful Business
-          </h1>
-        </div>
-
-        <div className="flex flex-wrap justify-center gap-4 pt-5 mt-5 services-main">
-          {[
-            {
-              icon: "fa-solid fa-hexagon-nodes",
-              title: "Ai Development",
-              description:
-                "We provide advanced AI solutions, including machine learning. Our AI services are designed to enhance your business efficiency and drive innovation.",
-              link: "/service",
-            },
-            {
-              icon: "fa-solid fa-cloud",
-              title: "Cloud Services",
-              description:
-                "Our cloud solutions enable businesses to scale seamlessly with secure, and cost-effective cloud infrastructure, we deliver end-to-end cloud services.",
-              link: "/service",
-            },
-            {
-              icon: "fa-solid fa-code",
-              title: "Web Development",
-              description:
-                "We design and develop responsive, secure, and visually to your business needs. Our web solutions and an exceptional user experience.",
-              link: "/service",
-            },
-            {
-              icon: "fa-brands fa-apple",
-              title: "Apps Development",
-              description:
-                "We provide advanced AI solutions, including machine learning. Our AI services are designed to enhance your business efficiency and drive innovation.",
-              link: "/service",
-            },
-            {
-              icon: "fa-solid fa-magnifying-glass",
-              title: "SEO Optimization",
-              description:
-                "Boost your online presence with our expert SEO services. We help improve search engine rankings, drive organic traffic, and enhance your brand visibility.",
-              link: "/service",
-            },
-            {
-              icon: "fa-solid fa-phone",
-              title: "Call Us For Quote",
-              description:
-                "Get in touch with us today for a personalized quote tailored to your project needs. Let’s bring your ideas to life!",
-              link: "tel:+919558476369",
-            },
-          ].map((service, index) => (
-            <div
-              key={index}
-              className=" wow  services-boxes rounded-xl h-[20rem] mt-4 p-5 w-full pt-5 sm:w-[48%] lg:w-[32%] flex flex-col justify-between text-center shadow-md"
-            >
-              <div className="info"><a href={service.link}>
-                <div className="mb-5 animate__animated  animate__pulse animate__delay-0.2s  animate__infinite">
-
-                  <i className={`text-5xl text-blue-500   ${service.icon}`}></i>
-                </div> </a>
-                <h1 className="pb-5 text-xl font-medium ">{service.title}</h1>
-                <p>{service.description}</p>
-              </div>
-              <a className='wow animate__animated animate__pulse animate__infinite' href={service.link}>
-
-                <i
-                  className="flex items-center justify-center mx-auto text-2xl text-blue-500 wow fadeInUp fa-solid fa-arrow-right-long"
-                  data-wow-duration="1s"
-                  data-wow-delay="0.5s"
-                ></i>
-
+              <a
+                href="service.html"
+                className="px-5 py-3 mt-3 btn wow zoomIn text-white"
+                data-wow-delay="0.9s"
+                style={{ backgroundColor: '#06A3DA' }}
+              >
+                Request A Quote
               </a>
             </div>
-          ))}
-        </div>
-      </main>
-
-      {/* home page form */}
-
-      <main className=" flex flex-col md:flex-row w-[85%] mx-auto p-6 mt-10 md:mb-10 md:pb-10 " >
-        <div className="w-full h-auto md:w-1/2 md:h-96 wow animate__animated animate__bounceInLeft">
-          <h1 className="m-2 text-lg text-2xl font-extrabold text-blue-500">REQUEST A QUOTE</h1>
-          <h1 className="text-4xl m-2 font-extrabold text-xl/12 leading-[1.4] pb-3">
-            Need A Free Quote? <br /> Please Feel Free to Contact Us
-          </h1>
-          <div className="flex flex-col w-full m-2 md:flex-row">
-            <p className="flex items-center text-lg">
-              <i className="m-2 text-2xl text-blue-500 fa-solid fa-reply"></i>
-              Reply within 24 hours
-            </p>
-            <p className="flex items-center text-lg xl-5 m-sm-0 lg:ps-3 md:ps-3">
-              <i className="m-2 text-2xl text-blue-500 fa-solid fa-phone"></i>
-              24 hrs telephone support
-            </p>
+            <div className="col-lg-5" style={{ minHeight: '500px' }}>
+              <div className="position-relative h-100">
+                <img
+                  className="rounded position-absolute w-100 h-100 wow zoomIn"
+                  data-wow-delay="0.9s"
+                  src="src/assets/about.jpg"
+                  style={{ objectFit: 'cover' }}
+                  alt="About"
+                />
+              </div>
+            </div>
           </div>
-          <p className="p-2 text-lg text-gray-400">
-          Avatara TechnoBiz is a Surat-based digital agency specializing in delivering high-quality, cost-effective, and reliable web and e-commerce solutions. With a commitment to excellence, we ensure result-oriented services tailored to meet the unique 
-          </p>
-          <div className="call">
-            <h1 className="pt-5 mb-5 text-xl ms-3 text-sky-700">
-              Call to ask any question
+        </div>
+      </div>
+      {/* About End */}
+
+      {/* Features Start */}
+      <div className="py-5 container-fluid wow fadeInUp" data-wow-delay="0.1s">
+        <div className="container py-5">
+          <div
+            className="pb-3 mx-auto mb-5 text-center section-title position-relative"
+            style={{ maxWidth: '600px' }}
+          >
+            <h5 className="fw-bold text-uppercase" style={{ color: '#06A3DA' }}>Why Choose Us</h5>
+            <h1 className="mb-0">We Are Here to Grow Your Business Exponentially</h1>
+          </div>
+          <div className="row g-5">
+            <div className="col-lg-4">
+              <div className="row g-5">
+                <div className="col-12 wow zoomIn" data-wow-delay="0.2s">
+                  <div
+                    className="mb-3 rounded d-flex align-items-center justify-content-center"
+                    style={{ width: '60px', height: '60px', backgroundColor: '#06A3DA' }}
+                  >
+                    <i className="text-white fa fa-cubes"></i>
+                  </div>
+                  <h4>Quality Design</h4>
+                  <p className="mb-0">
+                    Our designs blend creativity with functionality, ensuring a seamless user experience while enhancing your brand’s visual appeal and market presence.
+                  </p>
+                </div>
+                <div className="col-12 wow zoomIn" data-wow-delay="0.6s">
+                  <div
+                    className="mb-3 rounded d-flex align-items-center justify-content-center"
+                    style={{ width: '60px', height: '60px', backgroundColor: '#06A3DA' }}
+                  >
+                    <i className="text-white fa fa-award"></i>
+                  </div>
+                  <h4>Timely Delivery</h4>
+                  <p className="mb-0">
+                    We understand the importance of deadlines and pride ourselves on delivering your projects on time, every time, without compromising quality and technologies.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-4 wow zoomIn" data-wow-delay="0.9s" style={{ minHeight: '350px' }}>
+              <div className="position-relative h-100">
+                <img
+                  className="rounded position-absolute w-100 h-100 wow zoomIn"
+                  data-wow-delay="0.1s"
+                  src="src/assets/feature.jpg"
+                  style={{ objectFit: 'cover' }}
+                  alt="Features"
+                />
+              </div>
+            </div>
+            <div className="col-lg-4">
+              <div className="row g-5">
+                <div className="col-12 wow zoomIn" data-wow-delay="0.4s">
+                  <div
+                    className="mb-3 rounded d-flex align-items-center justify-content-center"
+                    style={{ width: '60px', height: '60px', backgroundColor: '#06A3DA' }}
+                  >
+                    <i className="text-white fa fa-users-cog"></i>
+                  </div>
+                  <h4>Programming Experts</h4>
+                  <p className="mb-0">
+                    Our skilled developers deliver tailored solutions using the latest technologies and best practices, ensuring your business goals are met effectively.
+                  </p>
+                </div>
+                <div className="m-2 col-12 wow zoomIn" data-wow-delay="0.8s">
+                  <div
+                    className="mb-3 rounded d-flex align-items-center justify-content-center"
+                    style={{ width: '60px', height: '60px', backgroundColor: '#06A3DA' }}
+                  >
+                    <i className="text-white fa fa-phone-alt"></i>
+                  </div>
+                  <h4>24/7 Support</h4>
+                  <p className="mb-0">
+                    Our dedicated support team is available round-the-clock to assist you with any technical issues or queries, ensuring continuous assistance whenever you need it.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* Features End */}
+      {/* <!-- Service Start --> */}
+      <div className="py-5 container-fluid wow fadeInUp" data-wow-delay="0.1s">
+        <div className="container py-5">
+          <div className="pb-3 mx-auto mb-5 text-center section-title position-relative" style={{ maxWidth: '600px' }}>
+            <h5 className="fw-bold text-uppercase" style={{ color: '#06A3DA' }}>Our Services</h5>
+            <h1 className="mb-0">Custom IT Solutions for Your Successful Business</h1>
+          </div>
+          <div className="row g-5">
+            <div className="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
+              <div className="text-center rounded service-item bg-light d-flex flex-column align-items-center justify-content-center">
+                <div className="service-icon">
+                  <i className="text-white fa fa-shield-alt"></i>
+                </div>
+                <h4 className="mb-3">AI Development</h4>
+                <p className="m-0">
+                  We provide advanced AI solutions, including machine learning, natural language processing, and predictive analytics. Our AI services are designed to enhance your business efficiency and drive innovation.
+                </p>
+                <a className="rounded btn btn-lg" style={{ backgroundColor: '#06A3DA' }} href="/service">
+                  <i className="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            <div className="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.6s">
+              <div className="text-center rounded service-item bg-light d-flex flex-column align-items-center justify-content-center">
+                <div className="service-icon">
+                  <i className="text-white fa fa-chart-pie"></i>
+                </div>
+                <h4 className="mb-3">Cloud Services</h4>
+                <p className="m-0">
+                  Our cloud solutions enable businesses to scale seamlessly with secure, reliable, and cost-effective cloud infrastructure. From migration to management, we deliver end-to-end cloud services.
+                </p>
+                <a className="rounded btn btn-lg" style={{ backgroundColor: '#06A3DA' }} href="/service">
+                  <i className="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            <div className="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.9s">
+              <div className="text-center rounded service-item bg-light d-flex flex-column align-items-center justify-content-center">
+                <div className="service-icon">
+                  <i className="text-white fa fa-code"></i>
+                </div>
+                <h4 className="mb-3">Web Development</h4>
+                <p className="m-0">
+                  We design and develop responsive, secure, and visually appealing websites tailored to your business needs. Our web solutions ensure optimal performance and an exceptional user experience.
+                </p>
+                <a className="rounded btn btn-lg" style={{ backgroundColor: '#06A3DA' }} href="/service">
+                  <i className="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            <div className="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
+              <div className="text-center rounded service-item bg-light d-flex flex-column align-items-center justify-content-center">
+                <div className="service-icon">
+                  <i className="text-white fab fa-android"></i>
+                </div>
+                <h4 className="mb-3">Apps Development</h4>
+                <p className="m-0">
+                  We create custom mobile applications for iOS and Android platforms. Our apps are user-centric, feature-rich, and designed to elevate your business operations.
+                </p>
+                <a className="rounded btn btn-lg" style={{ backgroundColor: '#06A3DA' }} href="/service">
+                  <i className="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            <div className="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.6s">
+              <div className="text-center rounded service-item bg-light d-flex flex-column align-items-center justify-content-center">
+                <div className="service-icon">
+                  <i className="text-white fa fa-search"></i>
+                </div>
+                <h4 className="mb-3">SEO Optimization</h4>
+                <p className="m-0">
+                  Boost your online presence with our expert SEO services. We help improve search engine rankings, drive organic traffic, and enhance your brand visibility.
+                </p>
+                <a className="rounded btn btn-lg" style={{ backgroundColor: '#06A3DA' }} href="/service">
+                  <i className="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            <div className="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.9s">
+              <div className="p-5 text-center rounded position-relative h-100 d-flex flex-column align-items-center justify-content-center" style={{ backgroundColor: '#06A3DA' }}>
+                <h3 className="mb-3 text-white">Call Us For Quote</h3>
+                <p className="mb-3 text-white">
+                  Get in touch with us today for a personalized quote tailored to your project needs. Let’s bring your ideas to life!
+                </p>
+                <a href="tel:9558476369">
+                  <h2 className="mb-0 text-white">+91 9558476369</h2>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* <!-- Service End -->
+
+       <!-- Quote Start --> */}
+      <div className="py-5 container-fluid wow fadeInUp" data-wow-delay="0.1s">
+        <div className="container py-5">
+          <div className="row g-5">
+            <div className="col-lg-7">
+              <div className="pb-3 mb-5 section-title position-relative">
+                <h5 className="fw-bold text-uppercase" style={{ color: '#06A3DA' }}>
+                  Request A Quote
+                </h5>
+                <h1 className="mb-0">
+                  Need A Free Quote? Please Feel Free to Contact Us
+                </h1>
+              </div>
+              <div className="row gx-3">
+                <div className="col-sm-6 wow zoomIn" data-wow-delay="0.2s">
+                  <h5 className="mb-4">
+                    <i className="fa fa-reply me-3" style={{ color: '#06A3DA' }}></i>Reply within 24 hours
+                  </h5>
+                </div>
+                <div className="col-sm-6 wow zoomIn" data-wow-delay="0.4s">
+                  <h5 className="mb-4">
+                    <i className="fa fa-phone-alt me-3" style={{ color: '#06A3DA' }}></i>24 hrs telephone support
+                  </h5>
+                </div>
+              </div>
+              <p className="mb-4">
+                Avatara TechnoBiz is a Surat-based Digital Agency passing high quality, cost-productive, reliable result-oriented web and e-commerce clarifications on time for a global clientele.
+              </p>
+              <div className="mt-2 d-flex align-items-center wow zoomIn" data-wow-delay="0.6s">
+                <a href="tel:9558476369">
+                  <div className="rounded d-flex align-items-center justify-content-center" style={{ width: '60px', height: '60px', backgroundColor: '#06A3DA' }}>
+                    <i className="text-white fa fa-phone-alt"></i>
+                  </div>
+                </a>
+                <div className="ps-4">
+                  <h5 className="mb-2">Call to ask any question</h5>
+                  <a href="tel:9558476369">
+                    <h4 className="mb-0" style={{ color: '#06A3DA' }}>+91 9558476369</h4>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-5 m-0">
+              
+                <Home_Form />
+              
+            </div>
+          </div>
+        </div>
+      </div>
+
      
-            </h1>
-            <div className="flex items-center">
-              <div className="icon">
-                <i className="text-2xl text-blue-500 rounded-lg ms-2 ps-2 fa-solid fa-phone"></i>
-              </div>
-              <a href="tel:+919558476369">
-                <div className="text">
-                  <h1 className="m-2 text-lg text-center text-black">+91 9558476369</h1>
-                </div>
-              </a>
+
+      {/* vendor */}
+      {/* <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="container py-5 mb-5">
+        <div class="bg-white">
+            <div class="owl-carousel vendor-carousel">
+                <img src="img/vendor-1.jpg" alt="" class="img-fluid" />
+                <img src="img/vendor-2.jpg" alt="" class="img-fluid" />
+                <img src="img/vendor-3.jpg" alt="" class="img-fluid" />
+                <img src="img/vendor-4.jpg" alt="" class="img-fluid" />
+                <img src="img/vendor-5.jpg" alt="" class="img-fluid" />
+                <img src="img/vendor-6.jpg" alt="" class="img-fluid" />
+                <img src="img/vendor-7.jpg" alt="" class="img-fluid" />
+                <img src="img/vendor-8.jpg" alt="" class="img-fluid" />
+                <img src="img/vendor-9.jpg" alt="" class="img-fluid" />
             </div>
-            <div className="flex items-center">
-              <a href="mailto:avataratechnobiz@gmail.com">
-                <div className="icon">
-                  <i className="py-2 text-2xl text-blue-500 rounded-lg ms-2 ps-2 fa-solid fa-envelope"></i>
+        </div>
+    </div>
+         </div> */}
+
+      {/* faqs */}
+
+      <div>
+
+
+        {/* Footer Start */}
+        <div className="mt-5 container-fluid bg-dark text-light wow fadeInUp" data-wow-delay="0.1s">
+          <div className="container">
+            <div className="row gx-5">
+              <div className="col-lg-4 col-md-6 footer-about">
+                <div className="p-4 text-center d-flex flex-column align-items-center justify-content-center" style={{ backgroundColor: '#06A3DA' }}>
+                  <a href="index.html" className="navbar-brand">
+                    <img src="img/favicon.ico" alt="" />
+                  </a>
+                  <p>
+                    We specialize in providing innovative, results-driven services that are tailored to meet the unique needs of our global clientele. With a strong focus on delivering projects on time, we help businesses achieve their digital goals by combining cutting-edge technology with creative excellence.
+                  </p>
+                  <form action="">
+                    <div className="input-group">
+                      <input type="text" className="p-3 border-white form-control" placeholder="Your Email" />
+                      <button className="btn btn-dark">Sign Up</button>
+                    </div>
+                  </form>
                 </div>
-              </a>
-              <div className="text">
-                <h1 className="m-2 text-lg text-center text-black">avataratechnobiz@gmail.com</h1>
+              </div>
+              <div className="text-white col-lg-8 col-md-6">
+                <div className="row gx-5">
+                  <div className="pt-5 mb-5 col-lg-5 col-md-12 footer-section">
+                    <div className="pb-3 mb-4 section-title section-title-sm position-relative">
+                      <h3 className="mb-0 text-light">Get In Touch</h3>
+                    </div>
+                    <a href="https://www.google.com/maps/place/Avatara+Technobiz+LLP/@21.1407757,72.8794309,17z/data=!3m1!4b1!4m6!3m5!1s0x3be0515a0f81fa81:0x4847daa352709464!8m2!3d21.1407758!4d72.8843018!16s%2Fg%2F11wtdy2fs9?entry=ttu&g_ep=EgoyMDI1MDEwNi4xIKXMDSoASAFQAw%3D%3D">
+                      <div className="mb-2 d-flex">
+                        <i className="bi bi-geo-alt me-2" style={{ color: '#06A3DA' }}></i>
+                        <p className="mb-0">
+                          Office No. 14, 5th floor, Madhuram Arcade-2, Near Madhuram Circle Dindoli, Surat, 394210
+                        </p>
+                      </div>
+                    </a>
+                    <a href="https://mail.google.com/mail/u/0/?fs=1&to=avataratechnobiz@gmail.com&tf=cm" target="_self">
+                      <div className="mb-2 d-flex">
+                        <i className="bi bi-envelope-open me-2" style={{ color: '#06A3DA' }}></i>
+                        <p className="mb-0">avataratechnobiz@gmail.com</p>
+                      </div>
+                    </a>
+
+                    <a href="tel:9558476369">
+                      <div className="mb-2 d-flex">
+                        <i className="bi bi-telephone me-2" style={{ color: '#06A3DA' }}></i>
+                        <p className="mb-0">+91 9558476369</p>
+                      </div>
+                    </a>
+
+                    <div className="mt-4 d-flex">
+                      <a className="btn btn-square me-2" style={{ backgroundColor: "#06A3DA" }} href="#"><i className="fa fa-envelope-open "></i></a>
+                      <a className="btn btn-square me-2" style={{ backgroundColor: "#06A3DA" }} href="https://www.linkedin.com/company/avatara-technobiz-llp/posts/?feedView=all">
+                        <i className="fab fa-linkedin-in fw-normal"></i>
+                      </a>
+                      <a className="btn btn-square" style={{ backgroundColor: "#06A3DA" }} href="https://www.instagram.com/avataratechnobiz/">
+                        <i className="fab fa-instagram fw-normal"></i>
+                      </a>
+                    </div>
+                  </div>
+                  <div className="pt-0 mb-5 col-lg-3 col-md-12 pt-lg-5">
+                    <div className="pb-3 mb-4 section-title section-title-sm position-relative">
+                      <h3 className="mb-0 text-light">Quick Links</h3>
+                    </div>
+                    <div className="link-animated d-flex flex-column justify-content-start">
+                      <a className="mb-2 text-light" href="/"><i className="bi bi-arrow-right me-2" style={{ color: "#06A3DA" }}></i> Home</a>
+                      <a className="mb-2 text-light" href="/about"><i className="bi bi-arrow-right me-2" style={{ color: "#06A3DA" }}></i> About Us</a>
+                      <a className="mb-2 text-light" href="./service"><i className="bi bi-arrow-right me-2" style={{ color: "#06A3DA" }}></i> Our Services</a>
+                      <a className="mb-2 text-light" href="./career"><i className="bi bi-arrow-right me-2" style={{ color: "#06A3DA" }}></i> Career</a>
+                      <a className="text-light" href="./contact"><i className="bi bi-arrow-right me-2" style={{ color: "#06A3DA" }}></i> Contact Us</a>
+                    </div>
+                  </div>
+                  <div className="pt-0 mb-5 col-lg-4 col-md-12 pt-lg-5">
+                    <div className="pb-3 mb-4 section-title section-title-sm position-relative">
+                      <h3 className="mb-0 text-light">Popular Links</h3>
+                    </div>
+                    <div className="link-animated d-flex flex-column justify-content-start">
+                      <a className="mb-2 text-light" href="./gallery.html"><i className="bi bi-arrow-right me-2" style={{ color: "#06A3DA" }}></i> Gallery</a>
+                      <a className="mb-2 text-light" href="#"><i className="bi bi-arrow-right me-2" style={{ color: "#06A3DA" }}></i> Features</a>
+                      <a className="mb-2 text-light" href="#"><i className="bi bi-arrow-right me-2" style={{ color: "#06A3DA" }}></i> Privacy Policy</a>
+                      <a className="mb-2 text-light" href="service.html"><i className="bi bi-arrow-right me-2" style={{ color: "#06A3DA" }}></i> Services</a>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-            <div className="flex items-center">
-              <a href="https://www.linkedin.com/company/avatara-technobiz-llp/posts/?feedView=all">
-                <div className="icon">
-                  <i className="py-2 text-3xl text-blue-500 rounded-lg ms-2 ps-2 fa-brands fa-linkedin"></i>
+          </div>
+        </div>
+      {/* <!-- Testimonial Start --> */}
+
+      <div>
+        <div className="py-5 container-fluid wow fadeInUp" data-wow-delay="0.1s">
+          <div className="container py-5">
+            <div className="pb-3 mx-auto mb-4 text-center section-title position-relative" style={{ maxWidth: '600px' }}>
+              <h5 className="fw-bold text-primary text-uppercase">Testimonial</h5>
+              <h1 className="mb-0">What Our Clients Say About Our Digital Services</h1>
+            </div>
+            <div className="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.6s">
+              <div className="my-4 bg-black testimonial-item">
+                <div className="px-5 pt-5 pb-4 d-flex align-items-center border-bottom">
+                  <img className="rounded img-fluid" src="img/testimonial-1.jpg" alt="Client 1" style={{ width: '60px', height: '60px' }} />
+                  <div className="ps-4">
+                    <h4 className="mb-1 text-primary">Client Name</h4>
+                    <small className="text-uppercase">Profession</small>
+                  </div>
                 </div>
-              </a>
-              <div className="text">
-                <h1 className="m-2 text-lg text-center text-black">Avatara Technobiz</h1>
+                <div className="px-5 pt-4 pb-5">
+                  Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam
+                </div>
+              </div>
+              <div className="my-4 testimonial-item bg-light">
+                <div className="px-5 pt-5 pb-4 d-flex align-items-center border-bottom">
+                  <img className="rounded img-fluid" src="img/testimonial-2.jpg" alt="Client 2" style={{ width: '60px', height: '60px' }} />
+                  <div className="ps-4">
+                    <h4 className="mb-1 text-primary">Client Name</h4>
+                    <small className="text-uppercase">Profession</small>
+                  </div>
+                </div>
+                <div className="px-5 pt-4 pb-5">
+                  Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam
+                </div>
+              </div>
+              <div className="my-4 testimonial-item bg-light">
+                <div className="px-5 pt-5 pb-4 d-flex align-items-center border-bottom">
+                  <img className="rounded img-fluid" src="img/testimonial-3.jpg" alt="Client 3" style={{ width: '60px', height: '60px' }} />
+                  <div className="ps-4">
+                    <h4 className="mb-1 text-primary">Client Name</h4>
+                    <small className="text-uppercase">Profession</small>
+                  </div>
+                </div>
+                <div className="px-5 pt-4 pb-5">
+                  Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam
+                </div>
+              </div>
+              <div className="my-4 testimonial-item bg-light">
+                <div className="px-5 pt-5 pb-4 d-flex align-items-center border-bottom">
+                  <img className="rounded img-fluid" src="img/testimonial-4.jpg" alt="Client 4" style={{ width: '60px', height: '60px' }} />
+                  <div className="ps-4">
+                    <h4 className="mb-1 text-primary">Client Name</h4>
+                    <small className="text-uppercase">Profession</small>
+                  </div>
+                </div>
+                <div className="px-5 pt-4 pb-5">
+                  Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam
+                </div>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Home_Form Component */}
-        <div className="w-full h-auto md:w-1/2 md:h-96 wow animate__animated animate__bounceInRight" id='requestaquate'>
-          <Home_Form />
+
+
+
+        {/* Quote Start */}
+        <div className="py-5 container-fluid wow fadeInUp" data-wow-delay="0.1s">
+          <div className="container py-5">
+            <div className="row g-5">
+              <div className="col-lg-7">
+                <div className="pb-3 mb-5 section-title position-relative">
+                  <h5 className="fw-bold text-uppercase" style={{ color: '#06A3DA' }}>Request A Quote</h5>
+                  <h1 className="mb-0">Need A Free Quote? Please Feel Free to Contact Us</h1>
+                </div>
+                <div className="row gx-3">
+                  <div className="col-sm-6 wow zoomIn" data-wow-delay="0.2s">
+                    <h5 className="mb-4">
+                      <i className="fa fa-reply me-3" style={{ color: '#06A3DA' }}></i>Reply within 24 hours
+                    </h5>
+                  </div>
+                  <div className="col-sm-6 wow zoomIn" data-wow-delay="0.4s">
+                    <h5 className="mb-4">
+                      <i className="fa fa-phone-alt me-3" style={{ color: '#06A3DA' }}></i>24 hrs telephone support
+                    </h5>
+                  </div>
+                </div>
+                <p className="mb-4">
+                  Avatara TechnoBiz is a Surat-based Digital Agency passing high quality, cost-productive, reliable result-oriented web and e-commerce clarifications on time for a global clientele.
+                </p>
+                <div className="mt-2 d-flex align-items-center wow zoomIn" data-wow-delay="0.6s">
+                  <a href="tel:9558476369">
+                    <div className="rounded d-flex align-items-center justify-content-center" style={{ width: '60px', height: '60px', backgroundColor: '#06A3DA' }}>
+                      <i className="text-white fa fa-phone-alt"></i>
+                    </div>
+                  </a>
+                  <div className="ps-4">
+                    <h5 className="mb-2">Call to ask any question</h5>
+                    <a href="tel:9558476369">
+                      <h4 className="mb-0" style={{ color: '#06A3DA' }}>+91 9558476369</h4>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div className="col-lg-5">
+                <div className="p-5 rounded h-100 d-flex align-items-center wow zoomIn" data-wow-delay="0.9s">
+                <Home_Form />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </main>
+        {/* Quote End */}
+      </div>
+     
+        {/* Footer End */}
 
-{/* review section from another components*/}
-    <div className='md:mt-4 md:py-10 xl:m-0 lg:p-0 animate__animate animate__bounceInRight '>
-      <section className='md:pt-5 md-:mt-5'>
-
-     <Reviews />
-      </section>
-    </div>
-
-  {/* company logos slider section */}
- 
-   <Company_Slider />
- {/* footer */}
- <Footer />
-    
+        {/* Footer Bottom Start */}
+        <div className="text-white container-fluid" style={{ background: '#061429' }}>
+          <div className="container text-center">
+            <div className="row justify-content-end">
+              <div className="col-lg-8 col-md-6">
+                <div className="d-flex align-items-center justify-content-center" style={{ height: '75px' }}>
+                  <p className="mb-0">
+                    &copy; <a className="text-white border-bottom" href="#">avataratechnobiz.com</a>. All Rights Reserved. Designed by
+                    <a className="text-white border-bottom" href="#">Avatara TechnoBiz</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* Footer Bottom End */}
+      </div>
     </>
   );
 };
 
 export default Home;
+
+
+
+

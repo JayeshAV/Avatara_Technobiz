@@ -77,156 +77,126 @@ const JobApplicationForm = () => {
 
     reader.readAsDataURL(resumeFile); // Start reading the file asynchronously
   };
-
+  
   return (
-    <div className="max-w-2xl mx-auto p-4">
-      <div className="p-6 bg-white rounded-lg shadow-md">
-        <h2 className="text-2xl font-semibold text-center mb-6">Job Application Form</h2>
+    <div className="container-fluid d-flex justify-content-center ">
+    <div className=" bg-white rounded ">
+      <h2 className="text-center mb-4 fw-semibold">Job Application Form</h2>
 
-        <Formik
-          initialValues={{
-            fullName: '',
-            email: '',
-            phone: '',
-            position: '',
-            experience: '',
-            resume: null,
-          }}
-          validationSchema={validationSchema}
-          onSubmit={handleSubmit}
-        >
-          {({ isSubmitting, setFieldValue, values }) => (
-            <Form className="space-y-4">
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Full Name
-                </label>
-                <Field
-                  type="text"
-                  name="fullName"
-                  className="w-full p-2 border rounded-md focus:ring-2 focus:ring-blue-500"
-                  placeholder="Enter your full name"
-                />
-                <ErrorMessage
-                  name="fullName"
-                  component="p"
-                  className="text-red-500 text-xs mt-1"
-                />
-              </div>
+      <Formik
+        initialValues={{
+          fullName: '',
+          email: '',
+          phone: '',
+          position: '',
+          experience: '',
+          resume: null,
+        }}
+        validationSchema={validationSchema}
+        onSubmit={handleSubmit}
+      >
+        {({ isSubmitting, setFieldValue, values }) => (
+          <Form className="row g-4">
+            {/* Full Name */}
+            <div className="col-md-12">
+              <label className="form-label">Full Name</label>
+              <Field
+                type="text"
+                name="fullName"
+                className="form-control"
+                placeholder="Enter your full name"
+                style={{ backgroundColor: "#EEF9FF" }}
+              />
+              <ErrorMessage name="fullName" component="p" className="text-danger small" />
+            </div>
 
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Email
-                </label>
-                <Field
-                  type="email"
-                  name="email"
-                  className="w-full p-2 border rounded-md focus:ring-2 focus:ring-blue-500"
-                  placeholder="Enter your email"
-                />
-                <ErrorMessage
-                  name="email"
-                  component="p"
-                  className="text-red-500 text-xs mt-1"
-                />
-              </div>
+            {/* Email */}
+            <div className="col-md-6">
+              <label className="form-label">Email</label>
+              <Field
+                type="email"
+                name="email"
+                className="form-control"
+                placeholder="Enter your email"
+                style={{ backgroundColor: "#EEF9FF" }}
+              />
+              <ErrorMessage name="email" component="p" className="text-danger small" />
+            </div>
 
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Phone Number
-                </label>
-                <Field
-                  type="tel"
-                  name="phone"
-                  className="w-full p-2 border rounded-md focus:ring-2 focus:ring-blue-500"
-                  placeholder="Enter your phone number"
-                />
-                <ErrorMessage
-                  name="phone"
-                  component="p"
-                  className="text-red-500 text-xs mt-1"
-                />
-              </div>
+            {/* Phone Number */}
+            <div className="col-md-6">
+              <label className="form-label">Phone Number</label>
+              <Field
+                type="tel"
+                name="phone"
+                className="form-control"
+                placeholder="Enter your phone number"
+                style={{ backgroundColor: "#EEF9FF" }}
+              />
+              <ErrorMessage name="phone" component="p" className="text-danger small" />
+            </div>
 
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Position
-                </label>
-                <Field
-                  as="select"
-                  name="position"
-                  className="w-full p-2 border rounded-md focus:ring-2 focus:ring-blue-500"
-                >
-                  <option value="">Select a position</option>
-                  {positions.map((position) => (
-                    <option key={position} value={position}>
-                      {position}
-                    </option>
-                  ))}
-                </Field>
-                <ErrorMessage
-                  name="position"
-                  component="p"
-                  className="text-red-500 text-xs mt-1"
-                />
-              </div>
+            {/* Position */}
+            <div className="col-md-12">
+              <label className="form-label">Position</label>
+              <Field as="select" name="position" className="form-select" style={{ backgroundColor: "#EEF9FF" }}>
+                <option value="">Select a position</option>
+                {positions.map((position) => (
+                  <option key={position} value={position}>
+                    {position}
+                  </option>
+                ))}
+              </Field>
+              <ErrorMessage name="position" component="p" className="text-danger small" />
+            </div>
 
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Experience (in years)
-                </label>
-                <Field
-                  type="number"
-                  name="experience"
-                  className="w-full p-2 border rounded-md focus:ring-2 focus:ring-blue-500"
-                  placeholder="Enter years of experience"
-                />
-                <ErrorMessage
-                  name="experience"
-                  component="p"
-                  className="text-red-500 text-xs mt-1"
-                />
-              </div>
+            {/* Experience */}
+            <div className="col-md-6">
+              <label className="form-label">Experience (in years)</label>
+              <Field
+                type="number"
+                name="experience"
+                className="form-control"
+                placeholder="Enter years of experience"
+                style={{ backgroundColor: "#EEF9FF" }}
+              />
+              <ErrorMessage name="experience" component="p" className="text-danger small" />
+            </div>
 
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Upload Resume
-                </label>
-                <input
-                  type="file"
-                  name="resume"
-                  accept=".pdf,.doc,.docx"
-                  onChange={(event) => setFieldValue('resume', event.currentTarget.files[0])}
-                  className="w-full p-2 border rounded-md focus:ring-2 focus:ring-blue-500"
-                />
-                {values.resume && (
-                  <p className="mt-2 text-sm text-gray-600">
-                    Uploaded File: <strong>{values.resume.name}</strong>
-                  </p>
-                )}
-                <ErrorMessage
-                  name="resume"
-                  component="p"
-                  className="text-red-500 text-xs mt-1"
-                />
-              </div>
+            {/* Resume Upload */}
+            <div className="col-md-6">
+              <label className="form-label">Upload Resume</label>
+              <input
+                type="file"
+                name="resume"
+                accept=".pdf,.doc,.docx"
+                onChange={(event) => setFieldValue("resume", event.currentTarget.files[0])}
+                className="form-control"
+                style={{ backgroundColor: "#EEF9FF" }}
+              />
+              {values.resume && (
+                <p className="mt-2 small text-muted">
+                  Uploaded File: <strong>{values.resume.name}</strong>
+                </p>
+              )}
+              <ErrorMessage name="resume" component="p" className="text-danger small" />
+            </div>
 
+            {/* Submit Button */}
+            <div className="col-12">
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className={`w-full py-2 px-4 rounded-md text-white font-medium ${
-                  isSubmitting
-                    ? 'bg-gray-400 cursor-not-allowed'
-                    : 'bg-blue-500 hover:bg-blue-600'
-                }`}
+                className={`btn btn-primary w-100 ${isSubmitting ? "disabled" : ""}`}
               >
-                {isSubmitting ? 'Submitting...' : 'Submit Application'}
+                {isSubmitting ? "Submitting..." : "Submit Application"}
               </button>
-            </Form>
-          )}
-        </Formik>
-      </div>
+            </div>
+          </Form>
+        )}
+      </Formik>
     </div>
+  </div>
   );
 };
 

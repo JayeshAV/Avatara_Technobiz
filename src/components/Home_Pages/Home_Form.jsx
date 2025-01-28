@@ -58,127 +58,107 @@ const Home_Form = () => {
   };
 
   return (
-    <div className="w-full max-w-lg px-4 py-6 m-auto">
-      <label
-        htmlFor="name"
-        className="block m-2 text-2xl font-medium text-center text-gray-700"
-      >
+    <div className="flex justify-center items-center min-h-screen bg-gray-100">
+    <div
+      className="w-full max-w-md p-6 rounded-lg shadow-md"
+    
+    >
+      <h2 className="text-center text-gray font-bold mb-4" style={{color:'grey',fontWeight:'normal',fontSize:'25px'}}>
         Request A Quote
-      </label>
+      </h2>
       <Formik
         initialValues={initialValues}
         validationSchema={validationSchema}
         onSubmit={handleSubmit}
       >
-        <Form className="w-full p-6 bg-white rounded-lg shadow-md">
-          {/* Name Field */}
-          <div className="mb-4">
-            <label
-              htmlFor="name"
-              className="block text-sm font-medium text-gray-700"
-            >
-              Name
-            </label>
-            <Field
-              type="text"
-              id="name"
-              name="name"
-              className="w-full p-2 mt-1 border rounded-md focus:ring-blue-500 focus:border-blue-500"
-            />
-            <ErrorMessage
-              name="name"
-              component="div"
-              className="mt-1 text-xs text-red-500"
-            />
-          </div>
+        {({ isSubmitting }) => (
+          <Form className="w-full bg-white p-5 rounded-lg">
+            {/* Name Field */}
+        
+            <div className="mb-3">
+              <Field
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                className="w-full pt-3  pb-3 p-2 border rounded-md bg-gray-100 rounded-md"
+                style={{backgroundColor:'#EEF9FF',width:'100%'}}
+              />
+              <ErrorMessage
+                name="name"
+                component="div"
+                className="text-red-500 text-xs mt-1"
+              />
+            </div>
 
-          {/* Email Field */}
-          <div className="mb-4">
-            <label
-              htmlFor="email"
-              className="block text-sm font-medium text-gray-700"
-            >
-              Email
-            </label>
-            <Field
-              type="email"
-              id="email"
-              name="email"
-              className="w-full p-2 mt-1 border rounded-md focus:ring-blue-500 focus:border-blue-500"
-              placeholder="example@gmail.com"
-            />
-            <ErrorMessage
-              name="email"
-              component="div"
-              className="mt-1 text-xs text-red-500"
-            />
-          </div>
+            {/* Email Field */}
+            <div className="mb-3">
+              <Field
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                className="w-full pt-3  pb-3 p-25 border rounded-md bg-gray-100"
+                style={{backgroundColor:'#EEF9FF',width:'100%'}}
+              />
+              <ErrorMessage
+                name="email"
+                component="div"
+                className="text-red-500 text-xs mt-1"
+              />
+            </div>
+<br />
+            {/* Service Field */}
+            <div className="mb-3">
+              <Field
+                as="select"
+                name="service"
+                className=" pt-3  pb-3 p-2 border rounded-md bg-gray-100"
+                style={{backgroundColor:'#EEF9FF',width:'100%'}}
+              >
+                <option value="">Select A Service</option>
+                <option value="service1">AI Development</option>
+                <option value="service2">Cloud Services</option>
+                <option value="service3">Web Development</option>
+                <option value="service4">Apps Development</option>
+                <option value="service5">SEO Optimization</option>
+              </Field>
+              <ErrorMessage
+                name="service"
+                component="div"
+                className="text-red-500 text-xs mt-1"
+              />
+            </div>
+<br />
+            {/* Message Field */}
+            <div className="mb-3">
+              <Field
+                as="textarea"
+                name="message"
+                placeholder="Message"
+                rows="4"
+                className="w-full pt-3  pb-3 p-2 border rounded-md bg-gray-100"
+                style={{backgroundColor:'#EEF9FF',width:'100%'}}
+              />
+              <ErrorMessage
+                name="message"
+                component="div"
+                className="text-red-500 text-xs mt-1"
+              />
+            </div>
 
-          {/* Service Field */}
-          <div className="mb-4">
-            <label
-              htmlFor="service"
-              className="block text-sm font-medium text-gray-700"
+            {/* Submit Button */}
+            <button
+              type="submit"
+              disabled={isSubmitting}
+              className="w-full  text-white py-3 rounded-md font-bold  transition border-none"
+              style={{backgroundColor:'#03A9F4',border:'none'}}
             >
-              Service
-            </label>
-            <Field
-              as="select"
-              id="service"
-              name="service"
-              className="w-full p-2 mt-1 border rounded-md focus:ring-blue-500 focus:border-blue-500"
-            >
-              <option value="">Select a service</option>
-              <option value="service1">Ai Development</option>
-              <option value="service2">Cloud Services</option>
-              <option value="service3">Web Development</option>
-              <option value="service4">Apps Development</option>
-              <option value="service5">SEO Optimization</option>
-            </Field>
-            <ErrorMessage
-              name="service"
-              component="div"
-              className="mt-1 text-xs text-red-500"
-            />
-          </div>
-
-          {/* Message Field */}
-          <div className="mb-4">
-            <label
-              htmlFor="message"
-              className="block text-sm font-medium text-gray-700"
-            >
-              Message
-            </label>
-            <Field
-              as="textarea"
-              id="message"
-              name="message"
-              rows="4"
-              className="w-full p-2 mt-1 border rounded-md focus:ring-blue-500 focus:border-blue-500"
-            />
-            <ErrorMessage
-              name="message"
-              component="div"
-              className="mt-1 text-xs text-red-500"
-            />
-          </div>
-
-          {/* Submit Button */}
-          <button
-            type="submit"
-            disabled={isSubmitting}
-            className={`mt-4 ${
-              isSubmitting
-                ? "bg-gray-400"
-                : "bg-blue-500 hover:bg-blue-700"
-            } text-white font-bold py-2 px-4 rounded`}
-          >
-            {isSubmitting ? "Submitting..." : "Request A Quote"}
-          </button>
-        </Form>
+              {isSubmitting ? "Submitting..." : "Request A Quote"}
+            </button>
+          </Form>
+        )}
       </Formik>
     </div>
+  </div>
   );
 };
 
