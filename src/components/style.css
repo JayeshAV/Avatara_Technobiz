@@ -4,14 +4,14 @@
 }
 
 .content-1 {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('src/assets/about-sec-1.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://cloudinary.hbs.edu/hbsit/image/upload/s--jPzS_T-I--/f_auto,c_fill,h_375,w_750,/v20200101/0C981EC15D5C9433260B4F32782C31DD.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 .content-2 {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('src/assets/about2.avif');
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://uknowva.com/images/people-meeting-seminar-office-concept.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
