@@ -277,28 +277,28 @@ const Home = () => {
               icon: "fa-solid fa-hexagon-nodes",
               title: "Ai Development",
               description:
-                "We provide advanced AI solutions, including machine learning, natural language processing, and predictive analytics. Our AI services are designed to enhance your business efficiency and drive innovation.",
+                "We provide advanced AI solutions, including machine learning. Our AI services are designed to enhance your business efficiency and drive innovation.",
               link: "/service",
             },
             {
               icon: "fa-solid fa-cloud",
               title: "Cloud Services",
               description:
-                "Our cloud solutions enable businesses to scale seamlessly with secure, reliable, and cost-effective cloud infrastructure. From migration to management, we deliver end-to-end cloud services.",
+                "Our cloud solutions enable businesses to scale seamlessly with secure, and cost-effective cloud infrastructure, we deliver end-to-end cloud services.",
               link: "/service",
             },
             {
               icon: "fa-solid fa-code",
               title: "Web Development",
               description:
-                "We design and develop responsive, secure, and visually appealing websites tailored to your business needs. Our web solutions ensure optimal performance and an exceptional user experience.",
+                "We design and develop responsive, secure, and visually to your business needs. Our web solutions and an exceptional user experience.",
               link: "/service",
             },
             {
               icon: "fa-brands fa-apple",
               title: "Apps Development",
               description:
-                "We provide advanced AI solutions, including machine learning, natural language processing, and predictive analytics. Our AI services are designed to enhance your business efficiency and drive innovation.",
+                "We provide advanced AI solutions, including machine learning. Our AI services are designed to enhance your business efficiency and drive innovation.",
               link: "/service",
             },
             {
