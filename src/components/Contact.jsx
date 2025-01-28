@@ -12,7 +12,7 @@ const Contact = () => {
     {/* bg-image get in touch */}
       <div>
         <div className="container-fluid wow animate__fadeInUp">
-        <div className="get-in-touch h-[440px] bg-no-repeat opacity-70  max-h-full bg-[url('src/assets/contactbf.png')] bg-center bg-top">
+        <div className="get-in-touch h-[440px] bg-no-repeat opacity-70  max-h-full bg-[url('https://www.krashitservices.com/assets/img/about.jpg')] bg-center bg-top">
         <div className="absolute text-center transform -translate-x-1/2 text-touch top-1/5 left-1/2 ">
         <h2 className='text-2xl text-black-400'>Check here For Customer Support</h2>
                 <h2 className='font-bold text-black text-8xl'>Get in Touch</h2>
