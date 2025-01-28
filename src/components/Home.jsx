@@ -22,14 +22,14 @@ const Home = () => {
 
   const slides = [
     {
-      image: 'src/assets/carousel-1.jpg',
+      image: 'https://www.michaelpage.co.in/sites/michaelpage.com.sg/files/inline-images/How%20to%20write%20employee%20testimonials%202_0.jpg',
       title: 'Creative & Innovative Digital Solution',
       subtitle: 'Creative & Innovative',
       link: 'service.html',
       btnText: 'Free Quote',
     },
     {
-      image: 'src/assets/carousel-2.jpg',
+      image: 'https://media.licdn.com/dms/image/v2/C5612AQFMCF78-Wfjkw/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1572341413864?e=2147483647&v=beta&t=IVNcYZMp7aYmnlqmE0w24YbGl1sVfrNhs8O41rIMl_k',
       title: 'Expert Solutions & Digital Transformation',
       subtitle: 'Enhance Digital Presence',
       link: 'service.html',
@@ -231,7 +231,7 @@ const Home = () => {
           {/* Center Image */}
           <div className="flex justify-center animate__animated animate__backInUp animate__delay-0.3s">
             <img
-              src="src/assets/feature.jpg"
+              src="https://m.media-amazon.com/images/I/7183mrVYBZL._AC_UF350,350_QL80_.jpg"
               alt="Team Discussion"
               className="w-full max-w-lg rounded-lg shadow-md"
             />
