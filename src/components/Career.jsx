@@ -23,7 +23,7 @@ const Career = () => {
           {/* Left Section: Picture */}
           <div className="flex-shrink-0 rounded-full picture lg:w-1/3">
             <img
-              src="https://www.krashitservices.com/assets/img/about.jpg"
+              src="https://images.squarespace-cdn.com/content/v1/5ed035e46fb71b623aaf3d1b/34b962a1-8263-455f-86a1-a1e2ebaa1e40/Team+meeting+2.jpg"
               alt=""
               className="w-full h-auto rounded-md shadow-md"
             />
