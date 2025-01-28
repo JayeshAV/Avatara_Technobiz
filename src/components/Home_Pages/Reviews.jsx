@@ -72,7 +72,7 @@ const Reviews = () => {
                 key={testimonial.id} 
                 className="testimonial-slide animate__animated animate__pulse animate__slower animate__delay-0.4s animate__infinite"
               >
-                <div className="p-4 border-1 border-[#3B82F6]-200 rounded-xl text-center w-full h-[400px] flex flex-col justify-between">
+                <div className="p-4 rounded-xl text-center w-full h-[400px] flex flex-col justify-between">
                   <div className="py-2">
                     <i className="fas fa-quote-right text-[#14213d] text-2xl"></i>
                   </div>
@@ -84,7 +84,7 @@ const Reviews = () => {
                     />
                   </div>
                   <div className="py-5">
-                    <p className="text-[#293241] text-sm leading-6">{testimonial.text}</p>
+                    <p className="text-[#293241] text-sm leading-6 p-3">{testimonial.text}</p>
                   </div>
                   <div className="pt-2">
                     <h4 className="text-[#293241] text-lg">{testimonial.name}</h4>
