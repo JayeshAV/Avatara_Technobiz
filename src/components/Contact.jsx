@@ -14,8 +14,9 @@ const Contact = () => {
         <div className="container-fluid wow animate__fadeInUp">
         <div className="get-in-touch h-[440px] bg-no-repeat opacity-70  max-h-full bg-[url('https://png.pngtree.com/thumb_back/fh260/background/20210829/pngtree-gradient-glass-morphism-user-interface-background-image_773993.jpg')] " style={{width:"100%",backgroundSize:'cover',backgroundPosition:'center'}}>
         <div className="absolute text-center transform -translate-x-1/2 text-touch top-1/5 left-1/2 ">
+        <h2 className='font-bold text-black text-8xl'>Get in Touch</h2>
         <h2 className='text-2xl text-black-400'>Check here For Customer Support</h2>
-                <h2 className='font-bold text-black text-8xl'>Get in Touch</h2>
+              
              
             </div>
         </div>
