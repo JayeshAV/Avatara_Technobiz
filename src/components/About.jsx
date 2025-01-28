@@ -195,7 +195,7 @@ const About = () => {
                   What sets us apart from other IT service providers?
                 </p>
                 <a
-                  href="#"
+                  href="/about"
                   className="font-medium text-blue-500 transition hover:text-blue-700"
                 >
                   Learn More
@@ -213,7 +213,7 @@ const About = () => {
                     management
                   </p>
                   <a
-                    href="#"
+                    href="/about"
                     className="font-medium text-blue-500 transition hover:text-blue-700"
                   >
                     Learn More
