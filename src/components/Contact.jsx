@@ -12,7 +12,7 @@ const Contact = () => {
     {/* bg-image get in touch */}
       <div>
         <div className="container-fluid wow animate__fadeInUp">
-        <div className="get-in-touch h-[440px] bg-no-repeat opacity-70  max-h-full bg-[url('https://png.pngtree.com/thumb_back/fh260/background/20210829/pngtree-gradient-glass-morphism-user-interface-background-image_773993.jpg')] bg-center bg-top">
+        <div className="get-in-touch h-[440px] bg-no-repeat opacity-70  max-h-full bg-[url('https://png.pngtree.com/thumb_back/fh260/background/20210829/pngtree-gradient-glass-morphism-user-interface-background-image_773993.jpg')] " style={{width:"100%",backgroundSize:'cover',backgroundPosition:'center'}}>
         <div className="absolute text-center transform -translate-x-1/2 text-touch top-1/5 left-1/2 ">
         <h2 className='text-2xl text-black-400'>Check here For Customer Support</h2>
                 <h2 className='font-bold text-black text-8xl'>Get in Touch</h2>
@@ -26,7 +26,7 @@ const Contact = () => {
      <FAQContactSection />
       {/* contact section */}
 
-      <main id='contact' className="flex flex-col w-[85%] mx-auto p-6 mt-10 md:mb-10 md:pb-10">
+      <main id='contact' className="container flex flex-col p-6 mx-auto mt-10 md:mb-10 md:pb-10">
   <h1 className="py-6 mb-10 text-5xl font-bold text-center text-blue-500">Contact Us For Inquiries</h1>
   <div className="flex flex-col w-full gap-5 mx-auto md:flex-row md:justify-between">
     {/* Contact Box 1 */}
@@ -89,7 +89,7 @@ const Contact = () => {
 
 {/* form section */}
 
-<main className=" flex flex-col md:flex-col w-[85%] mx-auto p-6 mt-10 md:mb-10 md:pb-10" >
+<main className="container flex flex-col p-6 mx-auto mt-10 md:flex-col md:mb-10 md:pb-10" >
         
 
         {/* Home_Form Component */}

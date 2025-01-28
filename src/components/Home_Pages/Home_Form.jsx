@@ -3,7 +3,6 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 
 const Home_Form = () => {
- 
   const validationSchema = Yup.object({
     name: Yup.string()
       .required("Name is required")
@@ -17,7 +16,6 @@ const Home_Form = () => {
       .min(10, "Message must have at least 10 characters"),
   });
 
-
   const initialValues = {
     name: "",
     email: "",
@@ -25,8 +23,8 @@ const Home_Form = () => {
     message: "",
   };
 
-  const googleScriptUrl = "https://script.google.com/macros/s/AKfycbyiR1RTsfXghmJpaivG3bVTG6HfDjnA1pOjCzZk_0R8XQvi4TCv2Oscq5cb58AoNhFi/exec";
-  
+  const googleScriptUrl =
+    "https://script.google.com/macros/s/AKfycbyiR1RTsfXghmJpaivG3bVTG6HfDjnA1pOjCzZk_0R8XQvi4TCv2Oscq5cb58AoNhFi/exec";
 
   const [isSubmitting, setIsSubmitting] = React.useState(false);
 
@@ -60,10 +58,10 @@ const Home_Form = () => {
   };
 
   return (
-    <div className="m-auto w-[80%]">
+    <div className="w-full max-w-lg px-4 py-6 m-auto">
       <label
         htmlFor="name"
-        className="block text-2xl m-2 font-medium text-center text-gray-700"
+        className="block m-2 text-2xl font-medium text-center text-gray-700"
       >
         Request A Quote
       </label>
@@ -72,7 +70,7 @@ const Home_Form = () => {
         validationSchema={validationSchema}
         onSubmit={handleSubmit}
       >
-        <Form className="bg-white w-full rounded-lg p-6 shadow-md">
+        <Form className="w-full p-6 bg-white rounded-lg shadow-md">
           {/* Name Field */}
           <div className="mb-4">
             <label
@@ -84,13 +82,13 @@ const Home_Form = () => {
             <Field
               type="text"
               id="name"
-              name="name"  
-              className="mt-1 p-2 w-full border rounded-md focus:ring-blue-500 focus:border-blue-500"
+              name="name"
+              className="w-full p-2 mt-1 border rounded-md focus:ring-blue-500 focus:border-blue-500"
             />
             <ErrorMessage
               name="name"
               component="div"
-              className="text-red-500 text-xs mt-1"
+              className="mt-1 text-xs text-red-500"
             />
           </div>
 
@@ -105,14 +103,14 @@ const Home_Form = () => {
             <Field
               type="email"
               id="email"
-              name="email"  
-              className="mt-1 p-2 w-full border rounded-md focus:ring-blue-500 focus:border-blue-500"
+              name="email"
+              className="w-full p-2 mt-1 border rounded-md focus:ring-blue-500 focus:border-blue-500"
               placeholder="example@gmail.com"
             />
             <ErrorMessage
               name="email"
               component="div"
-              className="text-red-500 text-xs mt-1"
+              className="mt-1 text-xs text-red-500"
             />
           </div>
 
@@ -127,8 +125,8 @@ const Home_Form = () => {
             <Field
               as="select"
               id="service"
-              name="service" 
-              className="mt-1 p-2 w-full border rounded-md focus:ring-blue-500 focus:border-blue-500"
+              name="service"
+              className="w-full p-2 mt-1 border rounded-md focus:ring-blue-500 focus:border-blue-500"
             >
               <option value="">Select a service</option>
               <option value="service1">Ai Development</option>
@@ -140,7 +138,7 @@ const Home_Form = () => {
             <ErrorMessage
               name="service"
               component="div"
-              className="text-red-500 text-xs mt-1"
+              className="mt-1 text-xs text-red-500"
             />
           </div>
 
@@ -155,14 +153,14 @@ const Home_Form = () => {
             <Field
               as="textarea"
               id="message"
-              name="message" 
+              name="message"
               rows="4"
-              className="mt-1 p-2 w-full border rounded-md focus:ring-blue-500 focus:border-blue-500"
+              className="w-full p-2 mt-1 border rounded-md focus:ring-blue-500 focus:border-blue-500"
             />
             <ErrorMessage
               name="message"
               component="div"
-              className="text-red-500 text-xs mt-1"
+              className="mt-1 text-xs text-red-500"
             />
           </div>
 
@@ -171,7 +169,9 @@ const Home_Form = () => {
             type="submit"
             disabled={isSubmitting}
             className={`mt-4 ${
-              isSubmitting ? "bg-gray-400" : "bg-blue-500 hover:bg-blue-700"
+              isSubmitting
+                ? "bg-gray-400"
+                : "bg-blue-500 hover:bg-blue-700"
             } text-white font-bold py-2 px-4 rounded`}
           >
             {isSubmitting ? "Submitting..." : "Request A Quote"}

@@ -263,7 +263,7 @@ const Home = () => {
       </main>
 
       {/* Our Services */}
-      <main className="container-fluid w-[85%]  p-6 mx-auto mt-10 animate__animated animate__fadeIn">
+      <main className="container p-6 mx-auto mt-10 animate__animated animate__fadeIn">
         <div className="pb-5 text-center">
           <h2 className="mt-5 text-3xl font-semibold text-blue-500 ">OUR SERVICES</h2>
           <h1 className="mt-3 mb-5 text-4xl font-bold text-gray-800">
