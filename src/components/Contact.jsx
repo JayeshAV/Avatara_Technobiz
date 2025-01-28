@@ -10,19 +10,18 @@ const Contact = () => {
   return (
     <>
     {/* bg-image get in touch */}
-      <div>
-        <div className="container-fluid wow animate__fadeInUp">
-        <div className="get-in-touch h-[440px] bg-no-repeat opacity-70  max-h-full bg-[url('https://png.pngtree.com/thumb_back/fh260/background/20210829/pngtree-gradient-glass-morphism-user-interface-background-image_773993.jpg')] " style={{width:"100%",backgroundSize:'cover',backgroundPosition:'center'}}>
-        <div className="absolute text-center transform -translate-x-1/2 text-touch top-1/5 left-1/2 ">
-        <h2 className='font-bold text-black text-8xl'>Get in Touch</h2>
-        <h2 className='text-2xl text-black-400'>Check here For Customer Support</h2>
-              
-             
-            </div>
-        </div>
-      
-        </div>
-      </div>
+    <div className="container-fluid wow animate__fadeInUp">
+  <div
+    className="get-in-touch h-screen bg-no-repeat opacity-70 max-h-full bg-[url('https://png.pngtree.com/thumb_back/fh260/background/20210829/pngtree-gradient-glass-morphism-user-interface-background-image_773993.jpg')]"
+    style={{ width: "100%", backgroundSize: "cover", backgroundPosition: "center" }}
+  >
+    <div className="absolute text-center transform -translate-x-1/2 top-1/4 left-1/2">
+      <h2 className="text-4xl font-bold text-black md:text-6xl lg:text-8xl">Get in Touch</h2>
+      <h2 className="text-xl text-gray-700 sm:text-2xl md:text-3xl lg:text-4xl">Check here For Customer Support</h2>
+    </div>
+  </div>
+</div>
+
      <FAQContactSection />
       {/* contact section */}
 
