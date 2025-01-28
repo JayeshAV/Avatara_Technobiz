@@ -150,7 +150,7 @@ const Home = () => {
         {/* Right Section */}
         <div className="flex justify-end md:w-1/2">
           <img
-            src="src/assets/about.jpg"
+            src="https://adso.com/static/in/img/about.jpg"
             alt="Team Discussion"
             className="w-full max-w-xl rounded-lg shadow-md"
           />
