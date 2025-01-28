@@ -67,7 +67,7 @@ const Reviews = () => {
             </h1>
           </div>
           <Slider {...settings} className="mt-5 testimonial-slider">
-            {testimonials.map((testimonial) => (
+            {testimonials.map((testimonial) => (  
               <div 
                 key={testimonial.id} 
                 className="testimonial-slide animate__animated animate__pulse animate__slower animate__delay-0.4s animate__infinite"

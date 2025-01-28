@@ -16,8 +16,7 @@ const Contact = () => {
         <div className="absolute text-center transform -translate-x-1/2 text-touch top-1/5 left-1/2 ">
         <h2 className='text-2xl text-black-400'>Check here For Customer Support</h2>
                 <h2 className='font-bold text-black text-8xl'>Get in Touch</h2>
-                <p className='py-5 text-red-800 ps-5'>Fill out the form and our team will get back to you as soon as we can !</p>
-                <a href="#contact" className='px-3 border-black rounded-md btn border-1 '>Learn more</a>
+             
             </div>
         </div>
       
