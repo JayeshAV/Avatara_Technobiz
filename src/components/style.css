@@ -1,34 +1,35 @@
-    .h-box i {
-        color: black;
-    }
-    
-    .content-1 {
-        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('src/assets/about-sec-1.jpg');
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-    
-    .content-2 {
-        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('src/assets/about2.avif');
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-    
-    .bg-opp {
-        background: linear-gradient(rgba(52, 136, 161, 0.5), rgba(112, 112, 112, 0.5)), url('https://img.freepik.com/free-vector/gradient-purple-green-background_23-2150284432.jpg');
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-    
-    .about-sec-3 .heading {
-        font-family: "Ovo";
-    }
-    
-    .boxes-heading {
-        font-family: poppins;
-        font-style: normal;
-        font-weight: 500;
-    }
+@import "tailwindcss";
+.h-box i {
+    color: black;
+}
+
+.content-1 {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('src/assets/about-sec-1.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.content-2 {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('src/assets/about2.avif');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg-opp {
+    background: linear-gradient(rgba(52, 136, 161, 0.5), rgba(112, 112, 112, 0.5)), url('https://img.freepik.com/free-vector/gradient-purple-green-background_23-2150284432.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.about-sec-3 .heading {
+    font-family: "Ovo";
+}
+
+.boxes-heading {
+    font-family: poppins;
+    font-style: normal;
+    font-weight: 500;
+}

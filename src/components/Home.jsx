@@ -56,28 +56,28 @@ const Home = () => {
           className={`absolute inset-0 w-full h-full transition-opacity duration-700 ease-in-out ${currentIndex === index ? 'opacity-100' : 'opacity-0'}`}
         >
           <img
-            className="h-full w-full object-cover opacity-60"
+            className="object-cover w-full h-full opacity-60"
             src={slide.image}
             alt={slide.title}
           />
-          <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-50 p-6">
-            <div className="p-6 max-w-3xl text-center space-y-4">
-              <h5 className="text-white text-lg font-semibold uppercase">
+          <div className="absolute inset-0 flex flex-col items-center justify-center p-6 bg-opacity-70">
+            <div className="max-w-3xl p-6 space-y-4 text-center">
+              <h5 className="text-lg font-semibold text-blue-800 uppercase">
                 {slide.subtitle}
               </h5>
-              <h1 className="text-white text-4xl md:text-6xl font-bold">
+              <h1 className="text-4xl font-bold text-gray-800 md:text-6xl">
                 {slide.title}
               </h1>
-              <div className="flex gap-4 justify-center">
+              <div className="flex justify-center gap-4">
                 <a
                   href={"#requestaquate"}
-                  className="bg-blue-600 text-white py-3 px-5 rounded-lg shadow-lg hover:bg-blue-700 transition"
+                  className="px-5 py-3 text-white transition bg-blue-600 rounded-lg shadow-lg hover:bg-blue-700"
                 >
                   {slide.btnText}
                 </a>
                 <a
                   href="/contact"
-                  className="border border-white text-white py-3 px-5 rounded-lg shadow-lg hover:bg-white hover:text-black transition"
+                  className="px-5 py-3 text-white transition border border-white rounded-lg shadow-lg hover:bg-white hover:text-black"
                 >
                   Contact Us
                 </a>
@@ -89,19 +89,19 @@ const Home = () => {
     </div>
     <button
       onClick={handlePrev}
-      className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white rounded-full p-3 hover:bg-opacity-75"
+      className="absolute p-3 text-white transform -translate-y-1/2 bg-black bg-opacity-50 rounded-full top-1/2 left-4 hover:bg-opacity-75"
     >
       <span className="sr-only">Previous</span>
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="h-6 w-6">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
       </svg>
     </button>
     <button
       onClick={handleNext}
-      className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white rounded-full p-3 hover:bg-opacity-75"
+      className="absolute p-3 text-white transform -translate-y-1/2 bg-black bg-opacity-50 rounded-full top-1/2 right-4 hover:bg-opacity-75"
     >
       <span className="sr-only">Next</span>
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="h-6 w-6">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
       </svg>
     </button>
@@ -113,10 +113,10 @@ const Home = () => {
 
       {/* about section */}
 
-      <main className="container max-w-screen-1xl mx-auto flex flex-col md:flex-row items-center mt-10 p-6 rounded-lg bg-white "> 
+      <main className="container flex flex-col items-center p-6 mx-auto mt-10 bg-white rounded-lg max-w-screen-1xl md:flex-row "> 
 
         {/* Left Section */}
-        <div className="md:w-1/2 p-6 space-y-6">
+        <div className="p-6 space-y-6 md:w-1/2">
           <h1 className="text-4xl font-bold text-gray-800">
             Your Trusted Partner for Cutting-Edge IT Solutions
           </h1>
@@ -125,39 +125,39 @@ const Home = () => {
           </p>
           <div className="grid grid-cols-2 gap-4">
             <div className="flex items-center text-lg">
-              <i className="p-2 text-blue-500 text-xl fa-solid fa-check"></i>Programming Experts
+              <i className="p-2 text-xl text-blue-500 fa-solid fa-check"></i>Programming Experts
             </div>
             <div className="flex items-center text-lg">
-              <i className="p-2 text-blue-500 text-xl fa-solid fa-check"></i>24/7 Support
+              <i className="p-2 text-xl text-blue-500 fa-solid fa-check"></i>24/7 Support
             </div>
             <div className="flex items-center text-lg">
-              <i className="p-2 text-blue-500 text-xl fa-solid fa-check"></i>Professional Staff
+              <i className="p-2 text-xl text-blue-500 fa-solid fa-check"></i>Professional Staff
             </div>
             <div className="flex items-center text-lg">
-              <i className="p-2 text-blue-500 text-xl fa-solid fa-check"></i>Timely Delivery
+              <i className="p-2 text-xl text-blue-500 fa-solid fa-check"></i>Timely Delivery
             </div>
           </div>
           <div className="flex gap-4">
-            <a href="tel:+919558476369" className="bg-blue-600 text-white font-bold py-4 px-6 rounded-lg shadow-lg hover:bg-blue-700 transition">
+            <a href="tel:+919558476369" className="px-6 py-4 font-bold text-white transition bg-blue-600 rounded-lg shadow-lg hover:bg-blue-700">
               +91 9558476369
             </a>
-            <a href="#requestaquate" className="bg-blue-600 text-white font-bold py-4 px-6 rounded-lg shadow-lg hover:bg-blue-700 transition">
+            <a href="#requestaquate" className="px-6 py-4 font-bold text-white transition bg-blue-600 rounded-lg shadow-lg hover:bg-blue-700">
               Request A Quote
             </a>
           </div>
         </div>
 
         {/* Right Section */}
-        <div className="md:w-1/2 flex justify-end">
+        <div className="flex justify-end md:w-1/2">
           <img
             src="src/assets/about.jpg"
             alt="Team Discussion"
-            className="rounded-lg shadow-md w-full max-w-xl"
+            className="w-full max-w-xl rounded-lg shadow-md"
           />
         </div>
       </main>
-      {/* <main className="container max-w-screen-1xl mx-auto flex flex-col md:flex-row items-center mt-10 p-6 space-y-8 md:space-y-0 md:space-x-8 bg-white rounded-lg">
-    <div className="md:w-1/2 space-y-6">
+      {/* <main className="container flex flex-col items-center p-6 mx-auto mt-10 space-y-8 bg-white rounded-lg max-w-screen-1xl md:flex-row md:space-y-0 md:space-x-8">
+    <div className="space-y-6 md:w-1/2">
       <h1 className="text-4xl font-bold text-gray-800">
         Your Trusted Partner for Cutting-Edge IT Solutions
       </h1>
@@ -166,29 +166,29 @@ const Home = () => {
       </p>
       <div className="grid grid-cols-2 gap-6">
         <div className="flex items-center text-lg">
-          <i className="p-2 text-blue-500 text-xl fa-solid fa-check"></i>Programming Experts
+          <i className="p-2 text-xl text-blue-500 fa-solid fa-check"></i>Programming Experts
         </div>
         <div className="flex items-center text-lg">
-          <i className="p-2 text-blue-500 text-xl fa-solid fa-check"></i>24/7 Support
+          <i className="p-2 text-xl text-blue-500 fa-solid fa-check"></i>24/7 Support
         </div>
         <div className="flex items-center text-lg">
-          <i className="p-2 text-blue-500 text-xl fa-solid fa-check"></i>Professional Staff
+          <i className="p-2 text-xl text-blue-500 fa-solid fa-check"></i>Professional Staff
         </div>
         <div className="flex items-center text-lg">
-          <i className="p-2 text-blue-500 text-xl fa-solid fa-check"></i>Timely Delivery
+          <i className="p-2 text-xl text-blue-500 fa-solid fa-check"></i>Timely Delivery
         </div>
       </div>
       <div className="flex gap-4">
-        <a href="tel:+919558476369" className="bg-blue-600 text-white font-bold py-4 px-6 rounded-lg shadow-lg hover:bg-blue-700 transition">
+        <a href="tel:+919558476369" className="px-6 py-4 font-bold text-white transition bg-blue-600 rounded-lg shadow-lg hover:bg-blue-700">
           +91 9558476369
         </a>
-        <a href="#requestaquate" className="bg-blue-600 text-white font-bold py-4 px-6 rounded-lg shadow-lg hover:bg-blue-700 transition">
+        <a href="#requestaquate" className="px-6 py-4 font-bold text-white transition bg-blue-600 rounded-lg shadow-lg hover:bg-blue-700">
           Request A Quote
         </a>
       </div>
     </div>
-    <div className="md:w-1/2 flex justify-end">
-      <img src="src/assets/about.jpg" alt="Team Discussion" className="rounded-lg shadow-md w-full max-w-xl" />
+    <div className="flex justify-end md:w-1/2">
+      <img src="src/assets/about.jpg" alt="Team Discussion" className="w-full max-w-xl rounded-lg shadow-md" />
     </div>
   </main> */}
 
@@ -197,32 +197,32 @@ const Home = () => {
       <main className="container max-w-screen-1xl mt-5 animate__animated  animate__delay-0.2s mx-auto p-6 space-y-12">
         {/* Title Section */}
         <div className="text-center">
-          <h2 className="text-blue-500 font-semibold text-3xl mt-5">WHY CHOOSE US</h2>
-          <h1 className="text-4xl font-bold text-gray-800 mt-3 mb-5">
+          <h2 className="mt-5 text-3xl font-semibold text-blue-500">WHY CHOOSE US</h2>
+          <h1 className="mt-3 mb-5 text-4xl font-bold text-gray-800">
             We Are Here to Grow Your Business Exponentially
           </h1>
         </div>
 
         {/* Features Section */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+        <div className="grid items-start grid-cols-1 gap-8 lg:grid-cols-3">
           {/* Left Features */}
           <div className="space-y-6">
             <div className="bg-white p-6 rounded-lg shadow-md animate__animated animate__bounceInLeft animate__delay-0.2s">
-              <div className="bg-blue-500 text-white w-12 h-12 flex items-center justify-center rounded-md mb-4">
+              <div className="flex items-center justify-center w-12 h-12 mb-4 text-white bg-blue-500 rounded-md">
                 <i className="fas fa-paint-brush"></i>
               </div>
               <h3 className="text-xl font-semibold text-gray-800">Quality Design</h3>
-              <p className="text-gray-600 mt-2">
+              <p className="mt-2 text-gray-600">
                 Our designs blend creativity with functionality, ensuring a seamless user experience while enhancing your brand’s visual appeal and market presence.
               </p>
             </div>
 
             <div className="bg-white p-6 rounded-lg shadow-md animate__animated animate__bounceInLeft animate__delay-0.2s">
-              <div className="bg-blue-500 text-white w-12 h-12 flex items-center justify-center rounded-md mb-4">
+              <div className="flex items-center justify-center w-12 h-12 mb-4 text-white bg-blue-500 rounded-md">
                 <i className="fas fa-clock"></i>
               </div>
               <h3 className="text-xl font-semibold text-gray-800">Timely Delivery</h3>
-              <p className="text-gray-600 mt-2">
+              <p className="mt-2 text-gray-600">
                 We understand the importance of deadlines and pride ourselves on delivering your projects on time, every time, without compromising quality and technologies.
               </p>
             </div>
@@ -233,28 +233,28 @@ const Home = () => {
             <img
               src="src/assets/feature.jpg"
               alt="Team Discussion"
-              className="rounded-lg shadow-md w-full max-w-lg"
+              className="w-full max-w-lg rounded-lg shadow-md"
             />
           </div>
 
           {/* Right Features */}
           <div className="space-y-6">
             <div className="bg-white p-6 rounded-lg shadow-md animate__animated animate__bounceInRight animate__delay-0.2s">
-              <div className="bg-blue-500 text-white w-12 h-12 flex items-center justify-center rounded-md mb-4">
+              <div className="flex items-center justify-center w-12 h-12 mb-4 text-white bg-blue-500 rounded-md">
                 <i className="fas fa-code"></i>
               </div>
               <h3 className="text-xl font-semibold text-gray-800">Programming Experts</h3>
-              <p className="text-gray-600 mt-2">
+              <p className="mt-2 text-gray-600">
                 Our skilled developers deliver tailored solutions using the latest technologies and best practices, ensuring your business goals are met effectively.
               </p>
             </div>
 
             <div className="bg-white p-6 rounded-lg shadow-md animate__animated animate__bounceInRight animate__delay-0.2s">
-              <div className="bg-blue-500 text-white w-12 h-12 flex items-center justify-center rounded-md mb-4">
+              <div className="flex items-center justify-center w-12 h-12 mb-4 text-white bg-blue-500 rounded-md">
                 <i className="fa-solid fa-phone"></i>
               </div>
               <h3 className="text-xl font-semibold text-gray-800">24/7 Support</h3>
-              <p className="text-gray-600 mt-2">
+              <p className="mt-2 text-gray-600">
                 Our dedicated support team is available round-the-clock to assist you with any technical issues or queries, ensuring continuous assistance whenever you need it.
               </p>
             </div>
@@ -264,14 +264,14 @@ const Home = () => {
 
       {/* Our Services */}
       <main className="container-fluid w-[85%]  p-6 mx-auto mt-10 animate__animated animate__fadeIn">
-        <div className="text-center pb-5">
-          <h2 className="text-blue-500 font-semibold text-3xl mt-5 ">OUR SERVICES</h2>
-          <h1 className="text-4xl font-bold text-gray-800 mt-3 mb-5">
+        <div className="pb-5 text-center">
+          <h2 className="mt-5 text-3xl font-semibold text-blue-500 ">OUR SERVICES</h2>
+          <h1 className="mt-3 mb-5 text-4xl font-bold text-gray-800">
             Custom IT Solutions for Your Successful Business
           </h1>
         </div>
 
-        <div className="services-main mt-5 pt-5 flex flex-wrap justify-center gap-4">
+        <div className="flex flex-wrap justify-center gap-4 pt-5 mt-5 services-main">
           {[
             {
               icon: "fa-solid fa-hexagon-nodes",
@@ -325,13 +325,13 @@ const Home = () => {
 
                   <i className={`text-5xl text-blue-500   ${service.icon}`}></i>
                 </div> </a>
-                <h1 className="text-xl font-medium pb-5  ">{service.title}</h1>
+                <h1 className="pb-5 text-xl font-medium ">{service.title}</h1>
                 <p>{service.description}</p>
               </div>
               <a className='wow animate__animated animate__pulse animate__infinite' href={service.link}>
 
                 <i
-                  className="wow fadeInUp text-blue-500 mx-auto flex items-center justify-center text-2xl fa-solid fa-arrow-right-long"
+                  className="flex items-center justify-center mx-auto text-2xl text-blue-500 wow fadeInUp fa-solid fa-arrow-right-long"
                   data-wow-duration="1s"
                   data-wow-delay="0.5s"
                 ></i>
@@ -345,18 +345,18 @@ const Home = () => {
       {/* home page form */}
 
       <main className=" flex flex-col md:flex-row w-[85%] mx-auto p-6 mt-10 md:mb-10 md:pb-10 " >
-        <div className="w-full md:w-1/2 h-auto md:h-96 wow animate__animated animate__bounceInLeft">
-          <h1 className="text-2xl m-2 text-lg text-blue-500 font-extrabold">REQUEST A QUOTE</h1>
+        <div className="w-full h-auto md:w-1/2 md:h-96 wow animate__animated animate__bounceInLeft">
+          <h1 className="m-2 text-lg text-2xl font-extrabold text-blue-500">REQUEST A QUOTE</h1>
           <h1 className="text-4xl m-2 font-extrabold text-xl/12 leading-[1.4] pb-3">
             Need A Free Quote? <br /> Please Feel Free to Contact Us
           </h1>
-          <div className="flex flex-col md:flex-row w-full m-2">
+          <div className="flex flex-col w-full m-2 md:flex-row">
             <p className="flex items-center text-lg">
-              <i className="text-2xl text-blue-500 fa-solid fa-reply m-2"></i>
+              <i className="m-2 text-2xl text-blue-500 fa-solid fa-reply"></i>
               Reply within 24 hours
             </p>
             <p className="flex items-center text-lg xl-5 m-sm-0 lg:ps-3 md:ps-3">
-              <i className="text-2xl text-blue-500 m-2 fa-solid fa-phone"></i>
+              <i className="m-2 text-2xl text-blue-500 fa-solid fa-phone"></i>
               24 hrs telephone support
             </p>
           </div>
@@ -364,45 +364,45 @@ const Home = () => {
           Avatara TechnoBiz is a Surat-based digital agency specializing in delivering high-quality, cost-effective, and reliable web and e-commerce solutions. With a commitment to excellence, we ensure result-oriented services tailored to meet the unique 
           </p>
           <div className="call">
-            <h1 className="ms-3 mb-5 text-xl text-sky-700 pt-5">
+            <h1 className="pt-5 mb-5 text-xl ms-3 text-sky-700">
               Call to ask any question
      
             </h1>
             <div className="flex items-center">
               <div className="icon">
-                <i className="text-2xl text-blue-500 ms-2 ps-2 rounded-lg fa-solid fa-phone"></i>
+                <i className="text-2xl text-blue-500 rounded-lg ms-2 ps-2 fa-solid fa-phone"></i>
               </div>
               <a href="tel:+919558476369">
                 <div className="text">
-                  <h1 className="text-lg text-black m-2 text-center">+91 9558476369</h1>
+                  <h1 className="m-2 text-lg text-center text-black">+91 9558476369</h1>
                 </div>
               </a>
             </div>
             <div className="flex items-center">
               <a href="mailto:avataratechnobiz@gmail.com">
                 <div className="icon">
-                  <i className="text-2xl text-blue-500 py-2  ms-2 ps-2 rounded-lg fa-solid fa-envelope"></i>
+                  <i className="py-2 text-2xl text-blue-500 rounded-lg ms-2 ps-2 fa-solid fa-envelope"></i>
                 </div>
               </a>
               <div className="text">
-                <h1 className="text-lg text-black m-2 text-center">avataratechnobiz@gmail.com</h1>
+                <h1 className="m-2 text-lg text-center text-black">avataratechnobiz@gmail.com</h1>
               </div>
             </div>
             <div className="flex items-center">
               <a href="https://www.linkedin.com/company/avatara-technobiz-llp/posts/?feedView=all">
                 <div className="icon">
-                  <i className="text-3xl py-2 text-blue-500 ms-2 ps-2 rounded-lg fa-brands fa-linkedin"></i>
+                  <i className="py-2 text-3xl text-blue-500 rounded-lg ms-2 ps-2 fa-brands fa-linkedin"></i>
                 </div>
               </a>
               <div className="text">
-                <h1 className="text-lg text-black m-2 text-center">Avatara Technobiz</h1>
+                <h1 className="m-2 text-lg text-center text-black">Avatara Technobiz</h1>
               </div>
             </div>
           </div>
         </div>
 
         {/* Home_Form Component */}
-        <div className="w-full md:w-1/2 h-auto md:h-96 wow animate__animated animate__bounceInRight" id='requestaquate'>
+        <div className="w-full h-auto md:w-1/2 md:h-96 wow animate__animated animate__bounceInRight" id='requestaquate'>
           <Home_Form />
         </div>
       </main>
