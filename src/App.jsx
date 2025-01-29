@@ -1,11 +1,11 @@
 import React from 'react'
 import AllRoutes from './components/AllRoutes'
-import Navbar from './components/Navbar'
+// import Navbar from './components/Navbar'
 
 const App = () => {
   return (
      <>
-    <Navbar />
+    {/* <Navbar /> */}
     <AllRoutes />
     
      </>

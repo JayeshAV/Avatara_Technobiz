@@ -7,25 +7,25 @@ import "swiper/css/autoplay";
 
 const testimonials = [
     {
-        img: "http://127.0.0.1:5501/img/testimonial-3.jpg",
+        img: "http://127.0.0.1:5500/startup-website-template/img/testimonial-2.jpg",
         name: "Client Name 1",
         profession: "Profession 1",
         review: "Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam."
     },
     {
-        img: "http://127.0.0.1:5501/img/testimonial-4.jpg",
+        img: "http://127.0.0.1:5500/startup-website-template/img/testimonial-3.jpg",
         name: "Client Name 1",
         profession: "Profession 1",
         review: "Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam."
     },
     {
-        img: "http://127.0.0.1:5501/img/testimonial-2.jpg",
+        img: "http://127.0.0.1:5500/startup-website-template/img/testimonial-4.jpg",
         name: "Client Name 1",
         profession: "Profession 1",
         review: "Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam."
     },
     {
-        img: "http://127.0.0.1:5501/img/testimonial-4.jpg",
+        img: "http://127.0.0.1:5500/startup-website-template/img/testimonial-5.jpg",
         name: "Client Name 1",
         profession: "Profession 1",
         review: "Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam."
@@ -72,7 +72,7 @@ const TestimonialSlider = () => {
                                     <img 
                                         src={testimonial.img} 
                                         alt={testimonial.name} 
-                                        className="rounded-circle me-3"
+                                        className=" me-3"
                                         style={{width: '64px', height: '64px'}}
                                     />
                                     <div>
