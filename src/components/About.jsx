@@ -1,6 +1,7 @@
 import React from 'react'
 import "./style.css"
 import Slider from './Home_Pages/Swiper'
+import logo from '../assets/favicon.ico';
 
 const About = () => {
   return (
@@ -222,8 +223,8 @@ const About = () => {
             <div className="row gx-5">
               <div className="col-lg-4 col-md-6 footer-about">
                 <div className="p-4 text-center d-flex flex-column align-items-center justify-content-center" style={{ backgroundColor: '#06A3DA' }}>
-                  <a href="index.html" className="navbar-brand">
-                    <img src="src/assets/favicon.ico" alt="" />
+                  <a href="/" className="navbar-brand">
+                    <img src={logo} alt="" />
                   </a>
                   <p>
                     We specialize in providing innovative, results-driven services that are tailored to meet the unique needs of our global clientele. With a strong focus on delivering projects on time, we help businesses achieve their digital goals by combining cutting-edge technology with creative excellence.
