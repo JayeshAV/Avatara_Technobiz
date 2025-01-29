@@ -85,7 +85,7 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <div className="col-lg-4 wow zoomIn" data-wow-delay="0.3s">
+            <div className="col-lg-4 wow zoomIn " data-wow-delay="0.3s">
               <div
                 className="p-4 shadow bg-light d-flex align-items-center justify-content-center"
                 style={{ height: '150px' }}
@@ -302,7 +302,7 @@ const Home = () => {
                   We provide advanced AI solutions, including machine learning, natural language processing, and predictive analytics. Our AI services are designed to enhance your business efficiency and drive innovation.
                 </p>
                 <a className="rounded btn btn-lg" style={{ backgroundColor: '#06A3DA' }} href="/service">
-                  <i className="bi bi-arrow-right"></i>
+                  <i className="bi bi-arrow-right" style={{color:'black'}}></i>
                 </a>
               </div>
             </div>
