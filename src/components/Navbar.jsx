@@ -62,7 +62,7 @@ const Navbar = () => {
         )}
 
         {/* Main Navbar */}
-        <nav className={`navbar navbar-expand-lg animate__animated animate__fadeIn ${scrolled ? 'fixed-top bg-transparent' : ''}`} style={{ backgroundColor: scrolled ? 'transparent' : '', zIndex: 999,borderBottom:"1px solid gray" }}>
+        <nav className={`navbar navbar-expand-lg animate__animated animate__fadeIn ${scrolled ? 'fixed-top bg-white' : ''}`} style={{ backgroundColor: scrolled ? 'white' : '', zIndex: 999,borderBottom:"1px solid gray" }}>
           <div className="container-fluid" style={{ width: '95%', margin: "auto" }}>
             <Link to="/" className="navbar-brand d-flex align-items-center">
               <img src={logo} alt="Avatara TechnoBiz" className="h-25" />
