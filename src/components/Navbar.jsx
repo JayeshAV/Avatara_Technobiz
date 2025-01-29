@@ -28,7 +28,7 @@ const Navbar = () => {
     };
 
     window.addEventListener('scroll', handleScroll);
-    
+
     // Cleanup the event listener on component unmount
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -38,12 +38,12 @@ const Navbar = () => {
       <div className="w-100">
         {/* Info bar */}
         {infoBarVisible && (
-          <div className="px-4 py-2 mx-auto text-white container-fluid wow fadeInDown" style={{backgroundColor:'#091E3E'}}>
-            <div className="d-flex justify-content-between align-items-center" style={{width:'95%',margin:"auto"}}>
+          <div className="px-4 py-2 mx-auto text-white container-fluid wow fadeInDown" style={{ backgroundColor: '#091E3E' }}>
+            <div className="d-flex justify-content-between align-items-center" style={{ width: '95%', margin: "auto" }}>
               <div className="d-flex">
                 <div className="d-flex align-items-center me-4">
                   <Phone size={16} />
-                  <a href="tel:+919558476369" className="text-sm text-white ms-2 decoration-none" style={{textDecoration:'none'}}>+91 9558476369</a>
+                  <a href="tel:+919558476369" className="text-sm text-white ms-2 decoration-none" style={{ textDecoration: 'none' }}>+91 9558476369</a>
                 </div>
               </div>
               <div className="d-flex">
@@ -62,7 +62,9 @@ const Navbar = () => {
         )}
 
         {/* Main Navbar */}
-        <nav className={`navbar navbar-expand-lg animate__animated animate__fadeIn ${scrolled ? 'fixed-top bg-white' : ''}`} style={{ backgroundColor: scrolled ? 'white' : '', zIndex: 999,borderBottom:"1px solid gray" }}>
+        <nav className={`navbar navbar-expand-lg animate__animated animate__fadeIn ${scrolled ? 'fixed-top bg-white' : ''}`} style={{
+          backgroundColor: scrolled ? 'white' : '', zIndex: 999
+        }}>
           <div className="container-fluid" style={{ width: '95%', margin: "auto" }}>
             <Link to="/" className="navbar-brand d-flex align-items-center">
               <img src={logo} alt="Avatara TechnoBiz" className="h-25" />

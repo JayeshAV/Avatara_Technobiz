@@ -80,7 +80,7 @@ const About = () => {
                 <img
                   className="rounded position-absolute w-100 h-100 wow zoomIn"
                   data-wow-delay="0.9s"
-                  src="src/assets/about.jpg"
+                  src="https://adso.com/static/in/img/about.jpg"
                   style={{ objectFit: 'cover' }}
                   alt="About"
                 />

@@ -2709,7 +2709,7 @@ h6,
 }
 
 .bg-header {
-    background: linear-gradient(rgba(9, 30, 62, .7), rgba(9, 30, 62, .7)), url('src/assets/Headerbg.png') bottom center no-repeat;
+    background: linear-gradient(rgba(9, 30, 62, .7), rgba(9, 30, 62, .7)), url('https://5.imimg.com/data5/RK/KR/UZ/SELLER-44280106/website-designing-500x500.png') bottom center no-repeat;
     background-size: cover;
     min-height: 450px;
 }

@@ -190,7 +190,7 @@ const Home = () => {
                 <img
                   className="rounded position-absolute w-100 h-100 wow zoomIn"
                   data-wow-delay="0.9s"
-                  src="src/assets/about.jpg"
+                  src="https://adso.com/static/in/img/about.jpg"
                   style={{ objectFit: 'cover' }}
                   alt="About"
                 />
@@ -245,7 +245,7 @@ const Home = () => {
                 <img
                   className="rounded position-absolute w-100 h-100 wow zoomIn"
                   data-wow-delay="0.1s"
-                  src="src/assets/feature.jpg"
+                  src="https://learnenglish.britishcouncil.org/sites/podcasts/files/RS6243_175211709-hig.jpg"
                   style={{ objectFit: 'cover' }}
                   alt="Features"
                 />
