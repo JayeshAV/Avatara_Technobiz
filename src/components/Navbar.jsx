@@ -70,7 +70,7 @@ const Navbar = () => {
           <div className="container-fluid" style={{ width: '95%', margin: "auto" }}>
             <Link to="/" className="navbar-brand d-flex align-items-center">
               <img src={logo} alt="Avatara TechnoBiz" className="h-25" />
-              <span className="ms-2 fs-3  " style={{color:'#06A3DA'}}>Avatara TechnoBiz</span>
+              <span className="ms-2 fs-3  font-weight-bold" style={{color:'#06A3DA',fontWeight:'800'}}>Avatara TechnoBiz</span>
             </Link>
 
             {/* Desktop Menu */}
