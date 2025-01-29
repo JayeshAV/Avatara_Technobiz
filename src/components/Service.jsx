@@ -112,6 +112,7 @@ const Service = () => {
           </div>
         </div>
       </div>
+
       <div className="py-5 container-fluid wow fadeInUp" data-wow-delay="0.1s">
         <div className="container py-5">
           <div className="row g-5">
@@ -132,7 +133,7 @@ const Service = () => {
                 </div>
                 <div className="col-sm-6 wow zoomIn" data-wow-delay="0.4s">
                   <h5 className="mb-4">
-                    <i className="fa fa-phone-alt me-3" style={{ color: '#06A3DA' }}></i>24 hrs telephone support
+                    <i className="fa fa-phone  me-3" style={{ color: '#06A3DA' }}></i>24 hrs telephone support
                   </h5>
                 </div>
               </div>
@@ -142,7 +143,7 @@ const Service = () => {
               <div className="mt-2 d-flex align-items-center wow zoomIn pt-3" data-wow-delay="0.6s">
                 <a href="tel:9558476369">
                   <div className="rounded d-flex align-items-center justify-content-center" style={{ width: '60px', height: '60px', backgroundColor: '#06A3DA' }}>
-                    <i className="text-white fa fa-phone-alt"></i>
+                    <i className="text-white fa fa-phone"></i>
                   </div>
                 </a>
                 <div className="ps-4">

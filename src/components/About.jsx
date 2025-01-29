@@ -67,7 +67,7 @@ const About = () => {
                 </div>
               </div>
               <a
-                href="service.html"
+                href="/service"
                 className="px-5 py-3 mt-3 btn wow zoomIn"
                 data-wow-delay="0.9s"
                 style={{backgroundColor:'#06A3DA'}}

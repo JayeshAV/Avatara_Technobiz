@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Phone } from 'lucide-react';
+import { Mail, Phone } from 'lucide-react';
 import 'animate.css';
 import './style.css';
 import logo from '../assets/favicon.ico';
@@ -41,9 +41,11 @@ const Navbar = () => {
           <div className="px-4 py-2 mx-auto text-white container-fluid wow fadeInDown" style={{ backgroundColor: '#091E3E' }}>
             <div className="d-flex justify-content-between align-items-center" style={{ width: '95%', margin: "auto" }}>
               <div className="d-flex">
-                <div className="d-flex align-items-center me-4">
-                  <Phone size={16} />
-                  <a href="tel:+919558476369" className="text-sm text-white ms-2 decoration-none" style={{ textDecoration: 'none' }}>+91 9558476369</a>
+                <div className="d-flex align-items-center justify-content-around me-4">
+                  <div> <Phone size={17} />
+                    <a href="tel:+919558476369" className="text-sm text-white ms-2 decoration-none" style={{ textDecoration: 'none' }}>+91 9558476369</a></div>
+
+
                 </div>
               </div>
               <div className="d-flex">
