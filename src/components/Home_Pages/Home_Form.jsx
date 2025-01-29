@@ -63,7 +63,7 @@ const Home_Form = () => {
       className="w-full max-w-md p-6 rounded-lg shadow-md"
     
     >
-      <h2 className="text-center text-gray font-bold mb-4" style={{color:'grey',fontWeight:'normal',fontSize:'25px'}}>
+      <h2 className="text-left text-gray font-bold  ms-5 mt-5" style={{color:'grey',fontWeight:'normal',fontSize:'25px'}}>
         Request A Quote
       </h2>
       <Formik
@@ -72,7 +72,7 @@ const Home_Form = () => {
         onSubmit={handleSubmit}
       >
         {({ isSubmitting }) => (
-          <Form className="w-full bg-white p-5 rounded-lg">
+          <Form className="w-full bg-white p-5 pt-3 rounded-lg">
             {/* Name Field */}
         
             <div className="mb-3">
@@ -80,7 +80,7 @@ const Home_Form = () => {
                 type="text"
                 name="name"
                 placeholder="Your Name"
-                className="w-full pt-3  pb-3 p-2 border rounded-md bg-gray-100 rounded-md"
+                className="w-full pt-3  pb-3 p-3 border rounded-md bg-gray-100 rounded-md"
                 style={{backgroundColor:'#EEF9FF',width:'100%'}}
               />
               <ErrorMessage
@@ -96,7 +96,7 @@ const Home_Form = () => {
                 type="email"
                 name="email"
                 placeholder="Your Email"
-                className="w-full pt-3  pb-3 p-25 border rounded-md bg-gray-100"
+                className="w-full pt-3  pb-3 p-3 border rounded-md bg-gray-100"
                 style={{backgroundColor:'#EEF9FF',width:'100%'}}
               />
               <ErrorMessage
@@ -111,7 +111,7 @@ const Home_Form = () => {
               <Field
                 as="select"
                 name="service"
-                className=" pt-3  pb-3 p-2 border rounded-md bg-gray-100"
+                className=" pt-3  pb-3 ps-3 border rounded-md bg-gray-100"
                 style={{backgroundColor:'#EEF9FF',width:'100%'}}
               >
                 <option value="">Select A Service</option>
@@ -135,7 +135,7 @@ const Home_Form = () => {
                 name="message"
                 placeholder="Message"
                 rows="4"
-                className="w-full pt-3  pb-3 p-2 border rounded-md bg-gray-100"
+                className="w-full pt-3  pb-3 p-3 border rounded-md bg-gray-100"
                 style={{backgroundColor:'#EEF9FF',width:'100%'}}
               />
               <ErrorMessage
@@ -149,7 +149,7 @@ const Home_Form = () => {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full  text-white py-3 rounded-md font-bold  transition border-none"
+              className="w-full  text-white py-3 rounded-md font-bold  transition border-none d-flex justify-content-center"
               style={{backgroundColor:'#03A9F4',border:'none'}}
             >
               {isSubmitting ? "Submitting..." : "Request A Quote"}

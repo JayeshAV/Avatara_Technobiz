@@ -2,14 +2,19 @@
 import React from 'react';
 import './style.css';
 import Home_Form from './Home_Pages/Home_Form';
+import Slider from './Home_Pages/Swiper';
+import Testimonial from './Home_Pages/Testimonial';
 
 
 const Home = () => {
   return (
     <>
-      {/* <div id="spinner" className="bg-white show position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-      <div className="spinner"></div>
-    </div> */}
+     <div id="spinner" className="bg-white show position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+  style={{transition: 'opacity 0.5s ease', opacity: '1'}}>
+  <div className="spinner"></div>
+</div>
+
+
       <div id="header-carousel" className="mb-5 carousel slide carousel-fade" data-bs-ride="carousel">
         <div className="carousel-inner">
           <div className="carousel-item active">
@@ -22,10 +27,10 @@ const Home = () => {
                 <h1 className="text-white display-1 mb-md-4 animated zoomIn">
                   Creative & Innovative Digital Solution
                 </h1>
-                <a href="service.html" className="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">
+                <a href="/service" className="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">
                   Free Quote
                 </a>
-                <a href="contact.html" className="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">
+                <a href="/contact" className="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">
                   Contact Us
                 </a>
               </div>
@@ -281,6 +286,7 @@ const Home = () => {
         </div>
       </div>
       {/* Features End */}
+      
       {/* <!-- Service Start --> */}
       <div className="py-5 container-fluid wow fadeInUp" data-wow-delay="0.1s">
         <div className="container py-5">
@@ -381,7 +387,7 @@ const Home = () => {
           <div className="row g-5">
             <div className="col-lg-7">
               <div className="pb-3 mb-5 section-title position-relative">
-                <h5 className="fw-bold text-uppercase" style={{ color: '#06A3DA' }}>
+                <h5 className=" text-uppercase" style={{ color: '#06A3DA' }}>
                   Request A Quote
                 </h5>
                 <h1 className="mb-0">
@@ -403,7 +409,7 @@ const Home = () => {
               <p className="mb-4">
                 Avatara TechnoBiz is a Surat-based Digital Agency passing high quality, cost-productive, reliable result-oriented web and e-commerce clarifications on time for a global clientele.
               </p>
-              <div className="mt-2 d-flex align-items-center wow zoomIn" data-wow-delay="0.6s">
+              <div className="mt-2 d-flex align-items-center wow zoomIn pt-3" data-wow-delay="0.6s">
                 <a href="tel:9558476369">
                   <div className="rounded d-flex align-items-center justify-content-center" style={{ width: '60px', height: '60px', backgroundColor: '#06A3DA' }}>
                     <i className="text-white fa fa-phone-alt"></i>
@@ -412,42 +418,70 @@ const Home = () => {
                 <div className="ps-4">
                   <h5 className="mb-2">Call to ask any question</h5>
                   <a href="tel:9558476369">
-                    <h4 className="mb-0" style={{ color: '#06A3DA' }}>+91 9558476369</h4>
+                    <h5 className="mb-0" style={{ color: '#06A3DA' , fontWeight:"normal"}}>+91 9558476369</h5>
                   </a>
                 </div>
               </div>
+              <div
+                className="mt-2 d-flex align-items-center wow zoomIn pt-3"
+                data-wow-delay="0.6s"
+              >
+                <a href="https://mail.google.com/mail/u/0/?fs=1&to=avataratechnobiz@gmail.com&tf=cm">
+                  <div
+                    className="rounded d-flex align-items-center justify-content-center"
+                    style={{ width: "60px", height: "60px", color: "white" , backgroundColor:"#06A3DA"}}
+                  >
+                    <i className="fa fa-envelope-open"></i>
+                  </div>
+                </a>
+                <div className="ps-4">
+                  <h5 className="mb-2" style={{fontWeight:'lighter'}}>Contact for Career Queries</h5>
+                  <a href="https://mail.google.com/mail/u/0/?fs=1&to=avataratechnobiz@gmail.com&tf=cm">
+                    <h5 className="mb-0" style={{color:'#06A3DA',fontSize:"20px"}}>avataratechnobiz@gmail.com</h5>
+                  </a>
+                </div>
+              </div>
+              <div className="d-flex align-items-center ju wow fadeIn pt-2" data-wow-delay="0.8s">
+                <a href="https://www.google.com/maps/place/Avatara+Technobiz+LLP/@21.1407757,72.8794309,17z/data=!3m1!4b1!4m6!3m5!1s0x3be0515a0f81fa81:0x4847daa352709464!8m2!3d21.1407758!4d72.8843018!16s%2Fg%2F11wtdy2fs9?entry=ttu&g_ep=EgoyMDI1MDEwNi4xIKXMDSoASAFQAw%3D%3D">
+                  <div
+                    className="rounded d-flex align-items-center justify-content-center"
+                    style={{ width: "60px", height: "60px",backgroundColor:"#06A3DA" }}
+                  >
+                    <i className="text-white fa fa-map-marker-alt"></i>
+                  </div>
+                </a>
+                <div className="ps-3 pt-3">
+                  <h5 className="mb-2">Visit our office</h5>
+                  <a href="https://www.google.com/maps/place/Avatara+Technobiz+LLP/@21.1407757,72.8794309,17z/data=!3m1!4b1!4m6!3m5!1s0x3be0515a0f81fa81:0x4847daa352709464!8m2!3d21.1407758!4d72.8843018!16s%2Fg%2F11wtdy2fs9?entry=ttu&g_ep=EgoyMDI1MDEwNi4xIKXMDSoASAFQAw%3D%3D">
+                    <h6 className="mb-0" style={{color:'#06A3DA',fontWeight:"initial",fontSize:'18px'}}>
+                      Office No. 14, 5th floor <br />
+                      Madhuram Arcade-2, Near Madhuram <br />
+                      Circle Dindoli, Surat, 394210
+                    </h6>
+                  </a>
+                </div>
+              </div>
+
             </div>
             <div className="col-lg-5 m-0">
-              
-                <Home_Form />
-              
+
+              <Home_Form />
+
             </div>
           </div>
         </div>
       </div>
+      <div>
 
-     
+      </div>
 
-      {/* vendor */}
-      {/* <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-    <div class="container py-5 mb-5">
-        <div class="bg-white">
-            <div class="owl-carousel vendor-carousel">
-                <img src="img/vendor-1.jpg" alt="" class="img-fluid" />
-                <img src="img/vendor-2.jpg" alt="" class="img-fluid" />
-                <img src="img/vendor-3.jpg" alt="" class="img-fluid" />
-                <img src="img/vendor-4.jpg" alt="" class="img-fluid" />
-                <img src="img/vendor-5.jpg" alt="" class="img-fluid" />
-                <img src="img/vendor-6.jpg" alt="" class="img-fluid" />
-                <img src="img/vendor-7.jpg" alt="" class="img-fluid" />
-                <img src="img/vendor-8.jpg" alt="" class="img-fluid" />
-                <img src="img/vendor-9.jpg" alt="" class="img-fluid" />
-            </div>
-        </div>
-    </div>
-         </div> */}
 
-      {/* faqs */}
+      <div className='mt-0 mb-5'>
+        <Testimonial />
+      </div>
+
+      <Slider />
+
 
       <div>
 
@@ -459,7 +493,7 @@ const Home = () => {
               <div className="col-lg-4 col-md-6 footer-about">
                 <div className="p-4 text-center d-flex flex-column align-items-center justify-content-center" style={{ backgroundColor: '#06A3DA' }}>
                   <a href="index.html" className="navbar-brand">
-                    <img src="img/favicon.ico" alt="" />
+                    <img src="src/assets/favicon.ico" alt="" />
                   </a>
                   <p>
                     We specialize in providing innovative, results-driven services that are tailored to meet the unique needs of our global clientele. With a strong focus on delivering projects on time, we help businesses achieve their digital goals by combining cutting-edge technology with creative excellence.
@@ -501,7 +535,7 @@ const Home = () => {
                     </a>
 
                     <div className="mt-4 d-flex">
-                      <a className="btn btn-square me-2" style={{ backgroundColor: "#06A3DA" }} href="#"><i className="fa fa-envelope-open "></i></a>
+                      <a className="btn btn-square me-2" style={{ backgroundColor: "#06A3DA" }} href="https://mail.google.com/mail/u/0/?fs=1&to=avataratechnobiz@gmail.com&tf=cm"><i className="fa fa-envelope-open "></i></a>
                       <a className="btn btn-square me-2" style={{ backgroundColor: "#06A3DA" }} href="https://www.linkedin.com/company/avatara-technobiz-llp/posts/?feedView=all">
                         <i className="fab fa-linkedin-in fw-normal"></i>
                       </a>
@@ -517,9 +551,9 @@ const Home = () => {
                     <div className="link-animated d-flex flex-column justify-content-start">
                       <a className="mb-2 text-light" href="/"><i className="bi bi-arrow-right me-2" style={{ color: "#06A3DA" }}></i> Home</a>
                       <a className="mb-2 text-light" href="/about"><i className="bi bi-arrow-right me-2" style={{ color: "#06A3DA" }}></i> About Us</a>
-                      <a className="mb-2 text-light" href="./service"><i className="bi bi-arrow-right me-2" style={{ color: "#06A3DA" }}></i> Our Services</a>
-                      <a className="mb-2 text-light" href="./career"><i className="bi bi-arrow-right me-2" style={{ color: "#06A3DA" }}></i> Career</a>
-                      <a className="text-light" href="./contact"><i className="bi bi-arrow-right me-2" style={{ color: "#06A3DA" }}></i> Contact Us</a>
+                      <a className="mb-2 text-light" href="/service"><i className="bi bi-arrow-right me-2" style={{ color: "#06A3DA" }}></i> Our Services</a>
+                      <a className="mb-2 text-light" href="/career"><i className="bi bi-arrow-right me-2" style={{ color: "#06A3DA" }}></i> Career</a>
+                      <a className="text-light" href="/contact"><i className="bi bi-arrow-right me-2" style={{ color: "#06A3DA" }}></i> Contact Us</a>
                     </div>
                   </div>
                   <div className="pt-0 mb-5 col-lg-4 col-md-12 pt-lg-5">
@@ -527,10 +561,10 @@ const Home = () => {
                       <h3 className="mb-0 text-light">Popular Links</h3>
                     </div>
                     <div className="link-animated d-flex flex-column justify-content-start">
-                      <a className="mb-2 text-light" href="./gallery.html"><i className="bi bi-arrow-right me-2" style={{ color: "#06A3DA" }}></i> Gallery</a>
-                      <a className="mb-2 text-light" href="#"><i className="bi bi-arrow-right me-2" style={{ color: "#06A3DA" }}></i> Features</a>
-                      <a className="mb-2 text-light" href="#"><i className="bi bi-arrow-right me-2" style={{ color: "#06A3DA" }}></i> Privacy Policy</a>
-                      <a className="mb-2 text-light" href="service.html"><i className="bi bi-arrow-right me-2" style={{ color: "#06A3DA" }}></i> Services</a>
+                      <a className="mb-2 text-light" href="/"><i className="bi bi-arrow-right me-2" style={{ color: "#06A3DA" }}></i> Gallery</a>
+                      <a className="mb-2 text-light" href="/"><i className="bi bi-arrow-right me-2" style={{ color: "#06A3DA" }}></i> Features</a>
+                      <a className="mb-2 text-light" href="/contact"><i className="bi bi-arrow-right me-2" style={{ color: "#06A3DA" }}></i> Privacy Policy</a>
+                      <a className="mb-2 text-light" href="/service"><i className="bi bi-arrow-right me-2" style={{ color: "#06A3DA" }}></i> Services</a>
                     </div>
                   </div>
                 </div>
@@ -538,121 +572,6 @@ const Home = () => {
             </div>
           </div>
         </div>
-      {/* <!-- Testimonial Start --> */}
-
-      <div>
-        <div className="py-5 container-fluid wow fadeInUp" data-wow-delay="0.1s">
-          <div className="container py-5">
-            <div className="pb-3 mx-auto mb-4 text-center section-title position-relative" style={{ maxWidth: '600px' }}>
-              <h5 className="fw-bold text-primary text-uppercase">Testimonial</h5>
-              <h1 className="mb-0">What Our Clients Say About Our Digital Services</h1>
-            </div>
-            <div className="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.6s">
-              <div className="my-4 bg-black testimonial-item">
-                <div className="px-5 pt-5 pb-4 d-flex align-items-center border-bottom">
-                  <img className="rounded img-fluid" src="img/testimonial-1.jpg" alt="Client 1" style={{ width: '60px', height: '60px' }} />
-                  <div className="ps-4">
-                    <h4 className="mb-1 text-primary">Client Name</h4>
-                    <small className="text-uppercase">Profession</small>
-                  </div>
-                </div>
-                <div className="px-5 pt-4 pb-5">
-                  Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam
-                </div>
-              </div>
-              <div className="my-4 testimonial-item bg-light">
-                <div className="px-5 pt-5 pb-4 d-flex align-items-center border-bottom">
-                  <img className="rounded img-fluid" src="img/testimonial-2.jpg" alt="Client 2" style={{ width: '60px', height: '60px' }} />
-                  <div className="ps-4">
-                    <h4 className="mb-1 text-primary">Client Name</h4>
-                    <small className="text-uppercase">Profession</small>
-                  </div>
-                </div>
-                <div className="px-5 pt-4 pb-5">
-                  Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam
-                </div>
-              </div>
-              <div className="my-4 testimonial-item bg-light">
-                <div className="px-5 pt-5 pb-4 d-flex align-items-center border-bottom">
-                  <img className="rounded img-fluid" src="img/testimonial-3.jpg" alt="Client 3" style={{ width: '60px', height: '60px' }} />
-                  <div className="ps-4">
-                    <h4 className="mb-1 text-primary">Client Name</h4>
-                    <small className="text-uppercase">Profession</small>
-                  </div>
-                </div>
-                <div className="px-5 pt-4 pb-5">
-                  Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam
-                </div>
-              </div>
-              <div className="my-4 testimonial-item bg-light">
-                <div className="px-5 pt-5 pb-4 d-flex align-items-center border-bottom">
-                  <img className="rounded img-fluid" src="img/testimonial-4.jpg" alt="Client 4" style={{ width: '60px', height: '60px' }} />
-                  <div className="ps-4">
-                    <h4 className="mb-1 text-primary">Client Name</h4>
-                    <small className="text-uppercase">Profession</small>
-                  </div>
-                </div>
-                <div className="px-5 pt-4 pb-5">
-                  Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-
-
-        {/* Quote Start */}
-        <div className="py-5 container-fluid wow fadeInUp" data-wow-delay="0.1s">
-          <div className="container py-5">
-            <div className="row g-5">
-              <div className="col-lg-7">
-                <div className="pb-3 mb-5 section-title position-relative">
-                  <h5 className="fw-bold text-uppercase" style={{ color: '#06A3DA' }}>Request A Quote</h5>
-                  <h1 className="mb-0">Need A Free Quote? Please Feel Free to Contact Us</h1>
-                </div>
-                <div className="row gx-3">
-                  <div className="col-sm-6 wow zoomIn" data-wow-delay="0.2s">
-                    <h5 className="mb-4">
-                      <i className="fa fa-reply me-3" style={{ color: '#06A3DA' }}></i>Reply within 24 hours
-                    </h5>
-                  </div>
-                  <div className="col-sm-6 wow zoomIn" data-wow-delay="0.4s">
-                    <h5 className="mb-4">
-                      <i className="fa fa-phone-alt me-3" style={{ color: '#06A3DA' }}></i>24 hrs telephone support
-                    </h5>
-                  </div>
-                </div>
-                <p className="mb-4">
-                  Avatara TechnoBiz is a Surat-based Digital Agency passing high quality, cost-productive, reliable result-oriented web and e-commerce clarifications on time for a global clientele.
-                </p>
-                <div className="mt-2 d-flex align-items-center wow zoomIn" data-wow-delay="0.6s">
-                  <a href="tel:9558476369">
-                    <div className="rounded d-flex align-items-center justify-content-center" style={{ width: '60px', height: '60px', backgroundColor: '#06A3DA' }}>
-                      <i className="text-white fa fa-phone-alt"></i>
-                    </div>
-                  </a>
-                  <div className="ps-4">
-                    <h5 className="mb-2">Call to ask any question</h5>
-                    <a href="tel:9558476369">
-                      <h4 className="mb-0" style={{ color: '#06A3DA' }}>+91 9558476369</h4>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-5">
-                <div className="p-5 rounded h-100 d-flex align-items-center wow zoomIn" data-wow-delay="0.9s">
-                <Home_Form />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        {/* Quote End */}
-      </div>
-     
-        {/* Footer End */}
 
         {/* Footer Bottom Start */}
         <div className="text-white container-fluid" style={{ background: '#061429' }}>
@@ -661,8 +580,8 @@ const Home = () => {
               <div className="col-lg-8 col-md-6">
                 <div className="d-flex align-items-center justify-content-center" style={{ height: '75px' }}>
                   <p className="mb-0">
-                    &copy; <a className="text-white border-bottom" href="#">avataratechnobiz.com</a>. All Rights Reserved. Designed by
-                    <a className="text-white border-bottom" href="#">Avatara TechnoBiz</a>
+                    &copy; <a className="text-white border-bottom" href="/">avataratechnobiz.com</a>. All Rights Reserved. Designed by
+                    <a className="text-white border-bottom" href="/">Avatara TechnoBiz</a>
                   </p>
                 </div>
               </div>

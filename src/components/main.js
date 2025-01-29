@@ -5,11 +5,13 @@
     var spinner = function() {
         setTimeout(function() {
             if ($('#spinner').length > 0) {
-                $('#spinner').removeClass('show');
+                $('#spinner').css('opacity', 0); // Set opacity to 0 to hide spinner
             }
-        }, 1);
+        }, 2000); // Set timeout for 2 seconds (adjust as needed)
     };
+
     spinner();
+
 
 
     // Initiate the wowjs

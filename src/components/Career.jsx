@@ -1,17 +1,18 @@
 import React from 'react'
 import JobAppicationForm from "./Home_Pages/JobAppicationForm"
+import Slider from './Home_Pages/Swiper'
 
 const Career = () => {
   return (
     <>
 
-      <div class="container-fluid py-5 bg-header" style={{ marginBottom: "30px" , backgroundColor:"#06A3DA" }}>
-        <div class="row py-5">
-          <div class="col-12 pt-lg-5 mt-lg-5 text-center">
-            <h1 class="display-4 text-white animated zoomIn">Career</h1>
-            <a href="/" class="h5 text-white">Home</a>
-            <i class="far fa-circle text-white px-2"></i>
-            <a href="/career" class="h5 text-white">Career</a>
+      <div className="container-fluid py-5 bg-header" style={{ marginBottom: "30px" , backgroundColor:"#06A3DA" }}>
+        <div className="row py-5">
+          <div className="col-12 pt-lg-5 mt-lg-5 text-center">
+            <h1 className="display-4 text-white animated zoomIn">Career</h1>
+            <a href="/" className="h5 text-white">Home</a>
+            <i className="far fa-circle text-white px-2"></i>
+            <a href="/career" className="h5 text-white">Career</a>
           </div>
         </div>
       </div>
@@ -393,110 +394,111 @@ const Career = () => {
         </div>
       </div>
 
+      {/* Swiper reviews */}
+      <Slider />
 
-{/* Footer */}
-<div className="mt-5 container-fluid bg-dark text-light wow fadeInUp" data-wow-delay="0.1s">
-  <div className="container">
-    <div className="row gx-5">
-      <div className="col-lg-4 col-md-6 footer-about">
-        <div className="p-4 text-center d-flex flex-column align-items-center justify-content-center" style={{backgroundColor:'#06A3DA'}}>
-          <a href="index.html" className="navbar-brand">
-            <img src="img/favicon.ico" alt="" />
-          </a>
-          <p>
-            We specialize in providing innovative, results-driven services that are tailored to meet the unique needs of our global clientele. With a strong focus on delivering projects on time, we help businesses achieve their digital goals by combining cutting-edge technology with creative excellence.
-          </p>
-          <form action="">
-            <div className="input-group">
-              <input type="text" className="p-3 border-white form-control" placeholder="Your Email" />
-              <button className="btn btn-dark">Sign Up</button>
-            </div>
-          </form>
-        </div>
-      </div>
-      <div className="text-white col-lg-8 col-md-6">
-        <div className="row gx-5">
-          <div className="pt-5 mb-5 col-lg-5 col-md-12 footer-section">
-            <div className="pb-3 mb-4 section-title section-title-sm position-relative">
-              <h3 className="mb-0 text-light">Get In Touch</h3>
-            </div>
-            <a href="https://www.google.com/maps/place/Avatara+Technobiz+LLP/@21.1407757,72.8794309,17z/data=!3m1!4b1!4m6!3m5!1s0x3be0515a0f81fa81:0x4847daa352709464!8m2!3d21.1407758!4d72.8843018!16s%2Fg%2F11wtdy2fs9?entry=ttu&g_ep=EgoyMDI1MDEwNi4xIKXMDSoASAFQAw%3D%3D">
-              <div className="mb-2 d-flex">
-                <i className="bi bi-geo-alt me-2" style={{color:'#06A3DA'}}></i>
-                <p className="mb-0">
-                  Office No. 14, 5th floor, Madhuram Arcade-2, Near Madhuram Circle Dindoli, Surat, 394210
-                </p>
-              </div>
-            </a>
-            <a href="https://mail.google.com/mail/u/0/?fs=1&to=avataratechnobiz@gmail.com&tf=cm" target="_self">
-              <div className="mb-2 d-flex">
-                <i className="bi bi-envelope-open me-2" style={{color:'#06A3DA'}}></i>
-                <p className="mb-0">avataratechnobiz@gmail.com</p>
-              </div>
-            </a>
 
-            <a href="tel:9558476369">
-              <div className="mb-2 d-flex">
-                <i className="bi bi-telephone me-2" style={{color:'#06A3DA'}}></i>
-                <p className="mb-0">+91 9558476369</p>
+      <div className="mt-5 container-fluid bg-dark text-light wow fadeInUp" data-wow-delay="0.1s">
+          <div className="container">
+            <div className="row gx-5">
+              <div className="col-lg-4 col-md-6 footer-about">
+                <div className="p-4 text-center d-flex flex-column align-items-center justify-content-center" style={{ backgroundColor: '#06A3DA' }}>
+                  <a href="index.html" className="navbar-brand">
+                    <img src="src/assets/favicon.ico" alt="" />
+                  </a>
+                  <p>
+                    We specialize in providing innovative, results-driven services that are tailored to meet the unique needs of our global clientele. With a strong focus on delivering projects on time, we help businesses achieve their digital goals by combining cutting-edge technology with creative excellence.
+                  </p>
+                  <form action="">
+                    <div className="input-group">
+                      <input type="text" className="p-3 border-white form-control" placeholder="Your Email" />
+                      <button className="btn btn-dark">Sign Up</button>
+                    </div>
+                  </form>
+                </div>
               </div>
-            </a>
+              <div className="text-white col-lg-8 col-md-6">
+                <div className="row gx-5">
+                  <div className="pt-5 mb-5 col-lg-5 col-md-12 footer-section">
+                    <div className="pb-3 mb-4 section-title section-title-sm position-relative">
+                      <h3 className="mb-0 text-light">Get In Touch</h3>
+                    </div>
+                    <a href="https://www.google.com/maps/place/Avatara+Technobiz+LLP/@21.1407757,72.8794309,17z/data=!3m1!4b1!4m6!3m5!1s0x3be0515a0f81fa81:0x4847daa352709464!8m2!3d21.1407758!4d72.8843018!16s%2Fg%2F11wtdy2fs9?entry=ttu&g_ep=EgoyMDI1MDEwNi4xIKXMDSoASAFQAw%3D%3D">
+                      <div className="mb-2 d-flex">
+                        <i className="bi bi-geo-alt me-2" style={{ color: '#06A3DA' }}></i>
+                        <p className="mb-0">
+                          Office No. 14, 5th floor, Madhuram Arcade-2, Near Madhuram Circle Dindoli, Surat, 394210
+                        </p>
+                      </div>
+                    </a>
+                    <a href="https://mail.google.com/mail/u/0/?fs=1&to=avataratechnobiz@gmail.com&tf=cm" target="_self">
+                      <div className="mb-2 d-flex">
+                        <i className="bi bi-envelope-open me-2" style={{ color: '#06A3DA' }}></i>
+                        <p className="mb-0">avataratechnobiz@gmail.com</p>
+                      </div>
+                    </a>
 
-            <div className="mt-4 d-flex">
-              <a className="btn btn-square me-2" style={{backgroundColor:"#06A3DA"}} href="#"><i className="fa fa-envelope-open "></i></a>
-              <a className="btn btn-square me-2" style={{backgroundColor:"#06A3DA"}} href="https://www.linkedin.com/company/avatara-technobiz-llp/posts/?feedView=all">
-                <i className="fab fa-linkedin-in fw-normal"></i>
-              </a>
-              <a className="btn btn-square" style={{backgroundColor:"#06A3DA"}} href="https://www.instagram.com/avataratechnobiz/">
-                <i className="fab fa-instagram fw-normal"></i>
-              </a>
+                    <a href="tel:9558476369">
+                      <div className="mb-2 d-flex">
+                        <i className="bi bi-telephone me-2" style={{ color: '#06A3DA' }}></i>
+                        <p className="mb-0">+91 9558476369</p>
+                      </div>
+                    </a>
+
+                    <div className="mt-4 d-flex">
+                      <a className="btn btn-square me-2" style={{ backgroundColor: "#06A3DA" }} href="https://mail.google.com/mail/u/0/?fs=1&to=avataratechnobiz@gmail.com&tf=cm"><i className="fa fa-envelope-open "></i></a>
+                      <a className="btn btn-square me-2" style={{ backgroundColor: "#06A3DA" }} href="https://www.linkedin.com/company/avatara-technobiz-llp/posts/?feedView=all">
+                        <i className="fab fa-linkedin-in fw-normal"></i>
+                      </a>
+                      <a className="btn btn-square" style={{ backgroundColor: "#06A3DA" }} href="https://www.instagram.com/avataratechnobiz/">
+                        <i className="fab fa-instagram fw-normal"></i>
+                      </a>
+                    </div>
+                  </div>
+                  <div className="pt-0 mb-5 col-lg-3 col-md-12 pt-lg-5">
+                    <div className="pb-3 mb-4 section-title section-title-sm position-relative">
+                      <h3 className="mb-0 text-light">Quick Links</h3>
+                    </div>
+                    <div className="link-animated d-flex flex-column justify-content-start">
+                      <a className="mb-2 text-light" href="/"><i className="bi bi-arrow-right me-2" style={{ color: "#06A3DA" }}></i> Home</a>
+                      <a className="mb-2 text-light" href="/about"><i className="bi bi-arrow-right me-2" style={{ color: "#06A3DA" }}></i> About Us</a>
+                      <a className="mb-2 text-light" href="/service"><i className="bi bi-arrow-right me-2" style={{ color: "#06A3DA" }}></i> Our Services</a>
+                      <a className="mb-2 text-light" href="/career"><i className="bi bi-arrow-right me-2" style={{ color: "#06A3DA" }}></i> Career</a>
+                      <a className="text-light" href="/contact"><i className="bi bi-arrow-right me-2" style={{ color: "#06A3DA" }}></i> Contact Us</a>
+                    </div>
+                  </div>
+                  <div className="pt-0 mb-5 col-lg-4 col-md-12 pt-lg-5">
+                    <div className="pb-3 mb-4 section-title section-title-sm position-relative">
+                      <h3 className="mb-0 text-light">Popular Links</h3>
+                    </div>
+                    <div className="link-animated d-flex flex-column justify-content-start">
+                      <a className="mb-2 text-light" href="/"><i className="bi bi-arrow-right me-2" style={{ color: "#06A3DA" }}></i> Gallery</a>
+                      <a className="mb-2 text-light" href="/"><i className="bi bi-arrow-right me-2" style={{ color: "#06A3DA" }}></i> Features</a>
+                      <a className="mb-2 text-light" href="/contact"><i className="bi bi-arrow-right me-2" style={{ color: "#06A3DA" }}></i> Privacy Policy</a>
+                      <a className="mb-2 text-light" href="/service"><i className="bi bi-arrow-right me-2" style={{ color: "#06A3DA" }}></i> Services</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <div className="pt-0 mb-5 col-lg-3 col-md-12 pt-lg-5">
-            <div className="pb-3 mb-4 section-title section-title-sm position-relative">
-              <h3 className="mb-0 text-light">Quick Links</h3>
-            </div>
-            <div className="link-animated d-flex flex-column justify-content-start">
-              <a className="mb-2 text-light" href="/"><i className="bi bi-arrow-right me-2" style={{color:"#06A3DA"}}></i> Home</a>
-              <a className="mb-2 text-light" href="/about"><i className="bi bi-arrow-right me-2" style={{color:"#06A3DA"}}></i> About Us</a>
-              <a className="mb-2 text-light" href="./service"><i className="bi bi-arrow-right me-2" style={{color:"#06A3DA"}}></i> Our Services</a>
-              <a className="mb-2 text-light" href="./career"><i className="bi bi-arrow-right me-2" style={{color:"#06A3DA"}}></i> Career</a>
-              <a className="text-light" href="./contact"><i className="bi bi-arrow-right me-2" style={{color:"#06A3DA"}}></i> Contact Us</a>
-            </div>
-          </div>
-          <div className="pt-0 mb-5 col-lg-4 col-md-12 pt-lg-5">
-            <div className="pb-3 mb-4 section-title section-title-sm position-relative">
-              <h3 className="mb-0 text-light">Popular Links</h3>
-            </div>
-            <div className="link-animated d-flex flex-column justify-content-start">
-              <a className="mb-2 text-light" href="./gallery.html"><i className="bi bi-arrow-right me-2" style={{color:"#06A3DA"}}></i> Gallery</a>
-              <a className="mb-2 text-light" href="#"><i className="bi bi-arrow-right me-2" style={{color:"#06A3DA"}}></i> Features</a>
-              <a className="mb-2 text-light" href="#"><i className="bi bi-arrow-right me-2" style={{color:"#06A3DA"}}></i> Privacy Policy</a>
-              <a className="mb-2 text-light" href="service.html"><i className="bi bi-arrow-right me-2" style={{color:"#06A3DA"}}></i> Services</a>
-            </div>
-          </div>
         </div>
-      </div>
-    </div>
-  </div>
-</div>
-{/* Footer End */}
 
-{/* Footer Bottom Start */}
-<div className="text-white container-fluid" style={{ background: '#061429' }}>
-  <div className="container m-auto text-center">
-    <div className="row justify-content-center">
-      <div className="col-lg-8 col-md-6">
-        <div className="d-flex align-items-center justify-content-center" style={{ height: '75px' }}>
-          <p className="mb-0">
-            &copy; <a className="text-white border-bottom" href="#">avataratechnobiz.com</a>. All Rights Reserved. Designed by
-            <a className="text-white border-bottom" href="#">Avatara TechnoBiz</a>
-          </p>
+        {/* Footer Bottom Start */}
+        <div className="text-white container-fluid" style={{ background: '#061429' }}>
+          <div className="container text-center">
+            <div className="row justify-content-end">
+              <div className="col-lg-8 col-md-6">
+                <div className="d-flex align-items-center justify-content-center" style={{ height: '75px' }}>
+                  <p className="mb-0">
+                    &copy; <a className="text-white border-bottom" href="/">avataratechnobiz.com</a>. All Rights Reserved. Designed by
+                    <a className="text-white border-bottom" href="/">Avatara TechnoBiz</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
-</div>
     </>
   )
 }
