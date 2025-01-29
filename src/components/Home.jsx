@@ -24,7 +24,7 @@ const Home = () => {
                 <h1 className="text-white display-1 mb-md-4 animated zoomIn">
                   Creative & Innovative Digital Solution
                 </h1>
-                <a href="/service" className="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">
+                <a href="/service" style={{backgroundColor:'#06A3DA'}} className="btn py-md-3 px-md-5 me-3 animated slideInLeft">
                   Free Quote
                 </a>
                 <a href="/contact" className="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">
@@ -43,10 +43,10 @@ const Home = () => {
                 <h1 className="text-white display-1 mb-md-4 animated zoomIn">
                   Expert Solutions & Digital Transformation
                 </h1>
-                <a href="service.html" className="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">
+                <a href="/service" style={{backgroundColor:"#06A3DA"}} className="btn py-md-3 px-md-5 me-3 animated slideInLeft">
                   Free Quote
                 </a>
-                <a href="contact.html" className="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">
+                <a href="/contact" className="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">
                   Contact Us
                 </a>
               </div>
