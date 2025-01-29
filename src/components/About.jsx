@@ -5,6 +5,7 @@ import Slider from './Home_Pages/Swiper'
 const About = () => {
   return (
    <>
+   
    <div>
    <div className="container-fluid bg-primary py-5 bg-header"style={{marginBottom:"30px"}}>
     <div className="row py-5">

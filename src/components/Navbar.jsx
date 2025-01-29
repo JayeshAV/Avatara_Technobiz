@@ -35,10 +35,10 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="w-100 sticky-top">
+      <div className="w-100">
         {/* Info bar */}
         {infoBarVisible && (
-          <div className="px-4 py-2 mx-auto text-white container-fluid wow fadeInDown" style={{backgroundColor:'#091E3E', transition: 'all 0.3s ease'}}>
+          <div className="px-4 py-2 mx-auto text-white container-fluid wow fadeInDown" style={{backgroundColor:'#091E3E'}}>
             <div className="d-flex justify-content-between align-items-center" style={{width:'95%',margin:"auto"}}>
               <div className="d-flex">
                 <div className="d-flex align-items-center me-4">
@@ -62,43 +62,39 @@ const Navbar = () => {
         )}
 
         {/* Main Navbar */}
-        <nav className={`navbar navbar-expand-lg animate__animated animate__fadeIn ${scrolled ? 'fixed-top bg-white' : 'bg-white'}`} style={{ 
-          backgroundColor: scrolled ? 'transparent' : '', 
-          zIndex: 999, 
-          transition: 'all 0.3s ease' 
-        }}>
+        <nav className={`navbar navbar-expand-lg animate__animated animate__fadeIn ${scrolled ? 'fixed-top bg-transparent' : ''}`} style={{ backgroundColor: scrolled ? 'transparent' : '', zIndex: 999 }}>
           <div className="container-fluid" style={{ width: '95%', margin: "auto" }}>
             <Link to="/" className="navbar-brand d-flex align-items-center">
               <img src={logo} alt="Avatara TechnoBiz" className="h-25" />
-              <span className="ms-2 fs-3 fw-bold" style={{color:'#06A3DA'}}>Avatara TechnoBiz</span>
+              <span className="ms-2 fs-3 fw-bold">Avatara TechnoBiz</span>
             </Link>
 
             {/* Desktop Menu */}
             <div className="collapse navbar-collapse" id="navbarNav">
               <ul className="navbar-nav ms-auto">
-                <li className="nav-item" style={{fontSize:'18px'}}>
+                <li className="nav-item">
                   <Link to="/" className="nav-link active text-primary hover:text-indigo-600 transition duration-300 ease-in-out transform hover:scale-105">
                     Home
                   </Link>
                 </li>
-                <li className="nav-item"  style={{fontSize:'18px'}}>
-                  <Link to="/about" className="nav-link text-dark transition duration-300 ease-in-out transform hover:scale-105"  >
-                  About
+                <li className="nav-item">
+                  <Link to="/about" className="nav-link text-dark hover:text-indigo-600 transition duration-300 ease-in-out transform hover:scale-105">
+                    About
                   </Link>
                 </li>
-                <li className="nav-item"  style={{fontSize:'18px'}}>
-                  <Link to="/service" className="nav-link text-dark transition duration-300 ease-in-out transform hover:scale-105"  >
-                    Service
+                <li className="nav-item">
+                  <Link to="/service" className="nav-link text-dark hover:text-indigo-600 transition duration-300 ease-in-out transform hover:scale-105">
+                    Services
                   </Link>
                 </li>
-                <li className="nav-item"  style={{fontSize:'18px'}}>
-                  <Link to="/career" className="nav-link text-dark transition duration-300 ease-in-out transform hover:scale-105"  >
-                Career
+                <li className="nav-item">
+                  <Link to="/career" className="nav-link text-dark hover:text-indigo-600 transition duration-300 ease-in-out transform hover:scale-105">
+                    Career
                   </Link>
                 </li>
-                <li className="nav-item" style={{fontSize:'18px'}}>
-                  <Link to="/contact" className="nav-link text-dark transition duration-300 ease-in-out transform hover:scale-105"  >
-                   Contact
+                <li className="nav-item">
+                  <Link to="/contact" className="nav-link text-dark hover:text-indigo-600 transition duration-300 ease-in-out transform hover:scale-105">
+                    Contact
                   </Link>
                 </li>
               </ul>

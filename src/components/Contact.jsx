@@ -4,6 +4,7 @@ import Home_Form from './Home_Pages/Home_Form'
 const Contact = () => {
   return (
    <>
+   
   
    <div className="container-fluid py-5 bg-header" style={{marginBottom:'30px',backgroundColor:'#06A3DA'}}>
             <div className="row py-5">

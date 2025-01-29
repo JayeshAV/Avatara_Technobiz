@@ -9,10 +9,7 @@ import Testimonial from './Home_Pages/Testimonial';
 const Home = () => {
   return (
     <>
-     <div id="spinner" className="bg-white show position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
-  style={{transition: 'opacity 0.5s ease', opacity: '1'}}>
-  <div className="spinner"></div>
-</div>
+     
 
 
       <div id="header-carousel" className="mb-5 carousel slide carousel-fade" data-bs-ride="carousel">
@@ -477,7 +474,7 @@ const Home = () => {
 
 
       <div className='mt-0 mb-5'>
-        <Testimonial />
+        <Testimonial  jsx="true"/>
       </div>
 
       <Slider />
