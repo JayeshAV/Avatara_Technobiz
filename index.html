@@ -12,6 +12,10 @@
 
     <!-- WOW.js -->
     <script src="./src/lib/wow/wow.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+
 
     <!-- Tailwind and jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -60,6 +64,16 @@
 </head>
 
 <body>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(() => {
+                new WOW().init();
+            }, 500);
+        });
+    </script>
+
+
+
     <div id="root"></div>
 </body>
 
