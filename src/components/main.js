@@ -4,9 +4,9 @@
     // Spinner
     var spinner = function() {
         setTimeout(function() {
-            if ($('#spinner').length > 0) {
-                $('#spinner').css('opacity', 0); // Set opacity to 0 to hide spinner
-            }
+
+            $('#spinner').css('opacity', 0); // Set opacity to 0 to hide spinner
+
         }, 1000); // Set timeout for 2 seconds (adjust as needed)
     };
 
