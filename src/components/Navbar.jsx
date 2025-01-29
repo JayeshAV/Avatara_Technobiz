@@ -65,60 +65,52 @@ const Navbar = () => {
 
         {/* Main Navbar */}
         <nav className={`navbar navbar-expand-lg animate__animated animate__fadeIn ${scrolled ? 'fixed-top bg-white' : ''}`} style={{
-          backgroundColor: scrolled ? 'white' : '', zIndex: 999
-        }}>
-          <div className="container-fluid" style={{ width: '95%', margin: "auto" }}>
-            <Link to="/" className="navbar-brand d-flex align-items-center">
-              <img src={logo} alt="Avatara TechnoBiz" className="h-25" />
-              <span className="ms-2 fs-3  font-weight-bold" style={{color:'#06A3DA',fontWeight:'800'}}>Avatara TechnoBiz</span>
-            </Link>
+  backgroundColor: scrolled ? 'white' : '', zIndex: 999
+}}>
+  <div className="container-fluid" style={{ width: '95%', margin: "auto" }}>
+    
+    {/* Logo */}
+    <Link to="/" className="navbar-brand d-flex align-items-center">
+      <img src={logo} alt="Avatara TechnoBiz" className="h-25" />
+      <span className="ms-2 fs-3 font-weight-bold" style={{color:'#06A3DA', fontWeight:'800'}}>Avatara TechnoBiz</span>
+    </Link>
 
-            {/* Desktop Menu */}
-            <div className="collapse navbar-collapse" id="navbarNav">
-              <ul className="navbar-nav ms-auto">
-                <li className="nav-item">
-                  <Link to="/" className="nav-link active text-primary hover:text-indigo-600 transition duration-300 ease-in-out transform hover:scale-105">
-                    Home
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link to="/about" className="nav-link text-dark hover:text-indigo-600 transition duration-300 ease-in-out transform hover:scale-105">
-                    About
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link to="/service" className="nav-link text-dark hover:text-indigo-600 transition duration-300 ease-in-out transform hover:scale-105">
-                    Services
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link to="/career" className="nav-link text-dark hover:text-indigo-600 transition duration-300 ease-in-out transform hover:scale-105">
-                    Career
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link to="/contact" className="nav-link text-dark hover:text-indigo-600 transition duration-300 ease-in-out transform hover:scale-105">
-                    Contact
-                  </Link>
-                </li>
-              </ul>
-            </div>
+    {/* ✅ Mobile Menu Toggle Button */}
+    <button
+      className="navbar-toggler"
+      type="button"
+      onClick={toggleMobileMenu}
+      aria-controls="navbarNav"
+      aria-expanded={isMobileMenuOpen}
+      aria-label="Toggle navigation"
+    >
+      <i class="fa-solid fa-bars"></i>
+    </button>
 
-            {/* Mobile Menu Toggle */}
-            <button
-              onClick={toggleMobileMenu}
-              className="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarNav"
-              aria-controls="navbarNav"
-              aria-expanded={isMobileMenuOpen ? "true" : "false"}
-              aria-label="Toggle navigation"
-            >
-              <span className="navbar-toggler-icon"></span>
-            </button>
-          </div>
-        </nav>
+    {/* Desktop Menu */}
+    <div className="collapse navbar-collapse" id="navbarNav">
+      <ul className="navbar-nav ms-auto">
+        <li className="nav-item">
+          <Link to="/" className="nav-link active text-primary">Home</Link>
+        </li>
+        <li className="nav-item">
+          <Link to="/about" className="nav-link text-dark">About</Link>
+        </li>
+        <li className="nav-item">
+          <Link to="/service" className="nav-link text-dark">Services</Link>
+        </li>
+        <li className="nav-item">
+          <Link to="/career" className="nav-link text-dark">Career</Link>
+        </li>
+        <li className="nav-item">
+          <Link to="/contact" className="nav-link text-dark">Contact</Link>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
