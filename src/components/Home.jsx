@@ -98,7 +98,7 @@ const Home = () => {
                 <div className="p-3" style={{ maxWidth: "900px" }}>
                   <h5 className="text-white text-uppercase mb-3 animated slideInDown">Creative & Innovative</h5>
                   <h1 className="display-1 text-white mb-md-4 animated zoomIn">Creative & Innovative Digital Solution</h1>
-                  <a href="quote.html" className="btn  py-md-3 px-md-5 me-3 animated slideInLeft" style={{ backgroundColor: '#06A3DA' }}>Free Quote</a>
+                  <a href="quote.html" className="btn  py-md-3 px-md-5 me-3 animated slideInLeft text-white" style={{ backgroundColor: '#06A3DA' }}>Free Quote</a>
                   <a href="" className="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">Contact Us</a>
                 </div>
               </div>
@@ -109,7 +109,7 @@ const Home = () => {
                 <div className="p-3" style={{ maxWidth: "900px" }}>
                   <h5 className="text-white text-uppercase mb-3 animated slideInDown">Creative & Innovative</h5>
                   <h1 className="display-1 text-white mb-md-4 animated zoomIn">Creative & Innovative Digital Solution</h1>
-                  <a href="quote.html" className="btn py-md-3 px-md-5 me-3 animated slideInLeft" style={{ backgroundColor: '#06A3DA' }}>Free Quote</a>
+                  <a href="quote.html" className="btn py-md-3 px-md-5 me-3 animated slideInLeft text-white" style={{ backgroundColor: '#06A3DA' }}>Free Quote</a>
                   <a href="" className="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">Contact Us</a>
                 </div>
               </div>
