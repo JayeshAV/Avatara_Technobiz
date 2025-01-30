@@ -93,7 +93,7 @@ const Home = () => {
         <div id="header-carousel" className="carousel slide carousel-fade" data-bs-ride="carousel">
           <div className="carousel-inner">
             <div className="carousel-item active">
-              <img className="w-100" src="src/assets/carousel-1.jpg" alt="Slide 1" />
+              <img className="w-100" src="https://www.michaelpage.co.in/sites/michaelpage.com.sg/files/inline-images/How%20to%20write%20employee%20testimonials%202_0.jpg" alt="Slide 1" />
               <div className="carousel-caption d-flex flex-column align-items-center justify-content-center">
                 <div className="p-3" style={{ maxWidth: "900px" }}>
                   <h5 className="text-white text-uppercase mb-3 animated slideInDown">Creative & Innovative</h5>
@@ -104,7 +104,7 @@ const Home = () => {
               </div>
             </div>
             <div className="carousel-item">
-              <img className="w-100" src="src/assets/carousel-2.jpg" alt="Slide 2" />
+              <img className="w-100" src="https://cdn.prod.website-files.com/5be9cc9f121027672f31b467/60f87a0380c1dc95e38be165_43.2.%20Investor%20Evaluating%20Startup%20Ideas.jpg" alt="Slide 2" />
               <div className="carousel-caption d-flex flex-column align-items-center justify-content-center">
                 <div className="p-3" style={{ maxWidth: "900px" }}>
                   <h5 className="text-white text-uppercase mb-3 animated slideInDown">Creative & Innovative</h5>
