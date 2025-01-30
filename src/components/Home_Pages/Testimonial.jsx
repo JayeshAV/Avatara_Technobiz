@@ -40,7 +40,7 @@ const TestimonialSlider = () => {
                     <h5 className="text-uppercase fw-bold mb-4" style={{color: '#03A9F4'}}>
                         Testimonial
                     </h5>
-                    <h2 className="fw-bold mb-4">
+                    <h2 className="fw-bold mb-4" style={{fontFamily:"Nunito"}}>
                         What Our Clients Say About Our Digital Services
                     </h2>
                     <div className="mx-auto" style={{width: '60px', height: '3px', backgroundColor: '#03A9F4'}}></div>

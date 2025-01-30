@@ -113,18 +113,21 @@ h1,
 h2,
 .fw-bold {
     font-weight: 800 !important;
+    font-family: Nunito;
 }
 
 h3,
 h4,
 .fw-semi-bold {
     font-weight: 700 !important;
+    font-family: Nunito;
 }
 
 h5,
 h6,
 .fw-medium {
     font-weight: 600 !important;
+    font-family: Nunito;
 }
 
 
@@ -171,6 +174,10 @@ h6,
     padding-left: 0;
     padding-right: 0;
     text-align: center;
+}
+
+p {
+    color: #6b6a75;
 }
 
 
@@ -2711,7 +2718,7 @@ h6,
 .bg-header {
     background: linear-gradient(rgba(9, 30, 62, .7), rgba(9, 30, 62, .7)), url('http://127.0.0.1:5500/startup-website-template/img/carousel-1.jpg') bottom center no-repeat;
     background-size: cover;
-    min-height: 450px;
+    min-height: 390px;
     background-position: center;
 }
 
@@ -2729,11 +2736,7 @@ h6,
     }
 }
 
-
-/* about page  */
-
 .accordion-button {
-    /* Dark background */
     color: #333;
     font-weight: 600;
     padding: 18px 25px;
@@ -2874,4 +2877,98 @@ h6,
 
 a {
     text-decoration: none;
+}
+
+.service-card {
+    background: #EEF9FF;
+    width: 100%;
+    padding: 50px;
+    transition: all 0.9s ease;
+    overflow: hidden;
+}
+
+.service-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #06A3DA;
+    transition: left 0.7s ease-in-out;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.service-card:hover::before {
+    left: 0;
+}
+
+.service-card a {
+    color: #06A3DA;
+}
+
+.service-card:hover {
+    transform: translateY(0px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: white;
+    z-index: 1;
+}
+
+.service-card * {
+    position: relative;
+    z-index: 1;
+}
+
+.service-card:hover .para {
+    color: white;
+}
+
+.service-card:hover a {
+    color: white;
+}
+
+.service-card:hover .service-icon {
+    background-color: white;
+}
+
+.service-card:hover .service-icon i {
+    color: #06A3DA;
+}
+
+.service-icon {
+    width: 70px;
+    height: 70px;
+    background: #06A3DA;
+    padding: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0px;
+    font-size: 24px;
+}
+
+.nav-pills .nav-link.active {
+    border: 0px solid #FFFFFF;
+    background-color: #06A3DA;
+    color: white;
+}
+
+.nav-pills {
+    padding: 0%;
+}
+
+.nav-pills .nav-link {
+    border-bottom: 1px solid transparent;
+    color: #212529;
+    font-size: 20px;
+    border: 1px solid #4d4d4d;
+    margin: 5px;
+}
+
+.tab-content .col-6 p {
+    font-family: "Nunito";
+    font-size: 20px;
+    padding-top: 5px;
 }
